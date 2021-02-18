@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Practice</title>
+</head>
+
+<body>
+
+    <section>
+        <form name="myForm" onsubmit="return formHandling()" method="get">
+            <label for="fname"></label>
+            <input placeholder="name" type="text" name="fname" id="fname"><br>
+
+            <label for="email"></label>
+            <input placeholder="email" type="email" name="email" id="email"><br>
+
+            <label for="age"></label>
+            <input placeholder="age" type="text" name="age" id="age"><br>
+
+            <button type="submit" id="submit">submit</button>
+        </form>
+    </section>
+
+    <section>
+        <p id="numPrompt"></p>
+    </section>
+
+    <section>
+        <button id="timeBtn">What time is it?</button>
+        <span><button id="clearTimeBtn">Clear time</button></span>
+        <p id="timeBtnAnswer"></p>
+    </section>
+
+    <section>
+        <h1 id="textColour">click this to change colour</h1>
+    </section>
+
+    <section>
+        <h1 id="doubleClickHeader">Double click this!</h1>
+    </section>
+
+    <section>
+        <p id="loremPara">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus deserunt hic voluptates exercitationem
+            assumenda quis dolor enim velit reprehenderit, atque vel voluptate ullam consequuntur. Deleniti, ipsum! Eos
+            porro totam dignissimos.
+        </p>
+    </section>
+
+    <!-- custom js link -->
+    <script src="scripts.js"></script>
+    <script>
+        function formHandling() {
+            // validates name input
+            let nameForm = document.forms.myForm.fname.value;
+            if (nameForm === "") {
+                alert("name not filled out");
+                return false;
+            }
+
+            // validates email input
+            let emailForm = document.forms.myForm.email.value;
+            if (emailForm === "") {
+                alert("email not filled out");
+                return false;
+            }
+
+            // validates age input
+            let ageForm = document.forms.myForm.age.value;
+            if (ageForm === "") {
+                alert("please don't leave your age blank");
+                return false;
+            }
+            if (ageForm <= 0) {
+                alert("please enter an age above 0 'cause u ain't 0 or below!");
+                return false;
+            }
+            if (isNaN(ageForm)) {
+                alert("please enter an actual number!");
+                return false;
+            }
+
+            // states all input are valid
+            alert("all inputs are valid");
+            return true;
+        }
+    </script>
+</body>
+
+</html>

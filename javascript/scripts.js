@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     loremPara.addEventListener("mouseenter", function () {
       this.style.fontSize = "3em";
-    }); 
+    });
     loremPara.addEventListener("mouseleave", function () {
       this.style.fontSize = "2em";
       this.style.fontWeight = "100";
@@ -102,10 +102,38 @@ document.addEventListener("DOMContentLoaded", function () {
   }
   loremPara();
 
+  function userName() {
+    let userName = "viv";
+    console.log(userName);
+    console.log("Hello! Your name is: " + userName + ".");
+    console.log(`Hello! Your name is ${userName}.`);
 
+    // document.write("<h1>This is a head title!</h1>")
+    // document.write("<h2>Hello " + userName + "!</h2>")
+  }
+  userName();
 
+  function userPrompt() {
+    let userColour = prompt(
+      "What colour would you like today?! (psst, hex colours cool too :) )"
+    );
+    document.body.style.backgroundColor = userColour;
+  }
+  userPrompt();
 
-  // for (let num = 5; num < 11; num++) {
+  function numberPrompt() {
+    let number = prompt("put a number less than 1");
+    let numPrompt = document.getElementById("numPrompt");
+    if (number < 1) {
+      numPrompt.innerText = "Well done! you know how to listen!";
+    } else {
+      numPrompt.innerText = "I can't accept that!";
+    }
+  }
+  numberPrompt();
+
+  // EXTRAS BELOWS:
+  //  for (let num = 5; num < 11; num++) {
   //   console.log(num);
   // }
 
