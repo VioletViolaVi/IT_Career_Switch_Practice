@@ -5,20 +5,175 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=`, initial-scale=1.0">
+    <!-- css fotorama -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
     <title>jQuery Practice</title>
+
+    <style>
+        body {
+            background-color: lightblue;
+            color: darkblue;
+        }
+
+        #gallery {
+            width: 800px;
+        }
+
+        #gallery ul {
+            width: 300px;
+            list-style-type: none;
+            float: left;
+        }
+
+        #gallery li {
+            display: inline;
+            float: left;
+            padding: 16px;
+        }
+
+        #gallery img {
+            border-style: none;
+        }
+
+        figure {
+            padding-top: 20px;
+            text-align: center;
+        }
+
+        figcaption {
+            font-weight: bold;
+            font-size: 1.5em;
+        }
+
+        form {
+            min-width: 80em;
+        }
+
+        input {
+            margin-bottom: 1em;
+        }
+
+        label {
+            width: 5em;
+            padding-right: 1em;
+            text-align: right;
+        }
+
+        #submit {
+            margin-left: 5em;
+        }
+
+        .error {
+            font-family: Arial, Helvetica, sans-serif;
+            font-style: italic;
+            font-size: 0.9em;
+            color: #ff0000;
+            margin-left: 1em;
+        }
+    </style>
 </head>
 
 <body>
 
-    <h1>Hello World</h1>
+    <h1>Image Gallery</h1>
+    <div id="gallery">
+        <ul>
+            <li>
+                <a href="img/photo1.jpg" title="Golden Gate Bridge">
+                    <img src="img/photo1thumb.jpg" alt="Golden Gate Bridge" width="100" height="75">
+                </a>
+            </li>
+            <li>
+                <a href="img/photo2.jpg" title="Rocky Coastline">
+                    <img src="img/photo2thumb.jpg" alt="Rocky Coastline" width="100" height="75">
+                </a>
+            </li>
+            <li>
+                <a href="img/photo3.jpg" title="Waves Crashing on the Coast">
+                    <img src="img/photo3thumb.jpg" alt="Waves Crashing on the Coast" width="100" height="75">
+                </a>
+            </li>
+            <li>
+                <a href="img/photo4.jpg" title="Waterfall near Big Star">
+                    <img src="img/photo4thumb.jpg" alt="Waterfall near Big Star" width="100" height="75">
+                </a>
+            </li>
+            <li>
+                <a href="img/photo5.jpg" title="Clouds on the Coast">
+                    <img src="img/photo5thumb.jpg" alt="Clouds on the Coast" width="100" height="75">
+                </a>
+            </li>
+            <li>
+                <a href="img/photo6.jpg" title="Sunset on the Coast">
+                    <img src="img/photo6thumb.jpg" alt="Sunset on the Coast" width="100" height="75">
+                </a>
+            </li>
+        </ul>
+        <figure>
+            <img src="img/photo1thumb.jpg" alt="Golden Gate Bridge" width="400" height="300">
+            <figcaption>Golden Gate Bridge</figcaption>
+        </figure>
+    </div>
 
+    <h2>Slideshow</h2>
+    <div class="fotorama" data-autoplay="true">
+        <img src="img/photo1.jpg" data-caption="Golden Gate Bridge" alt="Golden Gate Bridge">
+        <img src="img/photo2.jpg" data-caption="Rocky Coastline" alt="Rocky Coastline">
+        <img src="img/photo3.jpg" data-caption="Waves Crashing on the Coast" alt="Waves Crashing on the Coast">
+        <img src="img/photo4.jpg" data-caption="Waterfall near Big Star" alt="Waterfall near Big Star">
+        <img src="img/photo5.jpg" data-caption="Clouds on the Coast" alt="Clouds on the Coast">
+        <img src="img/photo6.jpg" data-caption="Sunset on the Coast" alt="Sunset on the Coast">
+    </div>
 
+    <h2>Newsletter Sign Up</h2>
+    <div>
+        <form id="newsForm" action="http://webdevbasics.net/scripts/demo.php" method="post">
+            <div>
+                <label for="userName">Name</label>
+                <input type="text" name="userName" id="userName" class="required">
+            </div>
+            <div>
+                <label for="userEmail">E-mail</label>
+                <input type="text" name="userEmail" id="userEmail" class="required email">
+            </div>
+            <button type="submit" value="Sign Up" id="submit">Submit</button>
+        </form>
+    </div>
 
+    <!-- jquery fotorama -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
     <!-- jQuery CDN link-->
     <script src="https://code.jquery.com/jquery-3.5.1.js"
         integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <!-- jquery validate -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.16.0/jquery.validate.js"></script>
     <!-- custom jquery link -->
     <script src="jqueryScripts.js"></script>
+    <!-- <script>
+        $("document").ready(function () {
+
+            $("#gallery a").hover(function () {
+                let galleryHref = $(this).attr("href");
+                let galleryAlt = $(this).attr("title");
+                $("figure img").attr("src", galleryHref, "alt", galleryAlt);
+                $("figcaption").text(galleryAlt);
+            });
+
+            $("#gallery a").click(function () {
+                let galleryHref = $(this).attr("href");
+                let galleryAlt = $(this).attr("title");
+                $("figure").css("display", "none");
+                $("figure img").attr("src", galleryHref, "alt", galleryAlt);
+                $("figcaption").text(galleryAlt);
+                $("figure").fadeToggle(1000);
+                return false;
+            });
+
+        });
+    </script> -->
+
 </body>
 
 </html>
