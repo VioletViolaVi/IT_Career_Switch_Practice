@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT Career Switch: What can JavaScript Do?</title>
+</head>
+
+<body>
+
+    <section>
+        <p id="demo">
+            JavaScript can change HTML content.
+        </p>
+        <button type="button" onclick="document.getElementById('demo').innerHTML = 'Hello JavaScript!'">
+            Click Me!
+        </button>
+        <br>
+        <br>
+    </section>
+
+    <section>
+        <img onclick="onOffBulb()" id="bulbImage" src="bulbOff.PNG" alt="A switched off light bulb." width="200"
+            height="300">
+        <p>Click the bulb to switch it on and off!</p>
+    </section>
+
+
+    <script>
+        function onOffBulb() {
+            let bulb = document.getElementById("bulbImage");
+            if (bulb.src.match("bulbOff.PNG")) {
+                bulb.src = "bulbOn.PNG";
+                bulb.alt = "A switched on light bulb.";
+            } else {
+                bulb.src = "bulbOff.PNG";
+                bulb.alt = "A switched off light bulb.";
+            };
+        };
+    </script>
+</body>
+
+</html>
