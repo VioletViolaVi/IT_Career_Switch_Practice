@@ -11,20 +11,54 @@
 <body>
 
     <section>
-        <p id="demo">
+        <h2 id="demo">
             JavaScript can change HTML content.
-        </p>
+        </h2>
         <button type="button" onclick="document.getElementById('demo').innerHTML = 'Hello JavaScript!'">
             Click Me!
         </button>
+        <button type="button"
+            onclick="document.getElementById('demo').innerHTML = 'JavaScript can change HTML content.'">
+            Click Me Back!
+        </button>
         <br>
         <br>
+        <hr>
     </section>
 
     <section>
         <img onclick="onOffBulb()" id="bulbImage" src="bulbOff.PNG" alt="A switched off light bulb." width="200"
             height="300">
         <p>Click the bulb to switch it on and off!</p>
+        <hr>
+    </section>
+
+    <section>
+        <h2 id="textChange">What else can JavaScript do?</h2>
+        <button onclick="textChange()" type="submit">Click Me!</button>
+        <button onclick="textChangeBack()" type="submit">Click Me Back!</button>
+        <hr>
+    </section>
+
+    <section>
+        <p id="paraAlert"></p>
+    </section>
+
+    <section>
+        <p id="toggleAlert" class="removeThisClass">This toggles with my class! (check dev tools :) )</p>
+        <button onclick="togglingClass()" type="submit">Toggle Me!</button>
+        <hr>
+    </section>
+
+    <section>
+        <label for="drinkAge">How old are you? Are you old enough to drink?</label>
+        <input type="text" name="drinkAge" id="drinkAge">
+        <p id="userAge"></p>
+        <img id="winePic" width="200px" height="200px"
+            src="https://www.seekpng.com/png/detail/77-774152_cartoon-wine-clipart-graphic-free-download-red-wine.png"
+            alt="Cartoon image of alcohol." style="display: none;">
+        <button onclick="drinkAge()" type="submit">Submit</button>
+        <hr>
     </section>
 
 
@@ -39,6 +73,57 @@
                 bulb.alt = "A switched off light bulb.";
             };
         };
+
+        function textChange() {
+            let text = document.getElementById("textChange");
+            text.style.color = "pink";
+            text.style.backgroundColor = "green";
+        };
+
+        function textChangeBack() {
+            let text = document.getElementById("textChange");
+            text.style.color = "black";
+            text.style.backgroundColor = "white";
+        };
+
+        function togglingClass() {
+            let paraClassItem = document.getElementById("toggleAlert");
+            if (paraClassItem.className === "removeThisClass") {
+                paraClassItem.className = "";
+            } else {
+                paraClassItem.className = "removeThisClass";
+            };
+        };
+
+        function drinkAge() {
+            let drinkAge = document.getElementById("drinkAge").value;
+            let response;
+            let winePic = document.getElementById("winePic");
+
+            if (isNaN(drinkAge) || drinkAge === "") {
+                response = "This is not a number!";
+                winePic.style.display = "none";
+            } else if (drinkAge < 18) {
+                response = "You are not old enough to drink!";
+                winePic.style.display = "none";
+            } else {
+                response = "Here's your alcohol! Drink responsibly tho...";
+                winePic.style.display = "block";
+            };
+
+            let userAge = document.getElementById("userAge");
+            userAge.innerText = response;
+        };
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            function paraAlert() {
+                let message = document.getElementById("paraAlert");
+                alert(message.innerText);
+            };
+            paraAlert();
+        });
     </script>
 </body>
 

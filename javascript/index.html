@@ -53,40 +53,40 @@
     <!-- custom js link -->
     <script src="scripts.js"></script>
     <script>
-        function formHandling() {
-            // validates name input
-            let nameForm = document.forms.myForm.fname.value;
-            if (nameForm === "") {
-                alert("name not filled out");
-                return false;
-            }
+            function formHandling() {
+                // validates name input
+                let nameForm = document.forms.myForm.fname.value;
+                if (nameForm === "") {
+                    alert("name not filled out");
+                    return false;
+                }
 
-            // validates email input
-            let emailForm = document.forms.myForm.email.value;
-            if (emailForm === "") {
-                alert("email not filled out");
-                return false;
-            }
+                // validates email input
+                let emailForm = document.forms.myForm.email.value;
+                if (emailForm === "") {
+                    alert("email not filled out");
+                    return false;
+                }
 
-            // validates age input
-            let ageForm = document.forms.myForm.age.value;
-            if (ageForm === "") {
-                alert("please don't leave your age blank");
-                return false;
-            }
-            if (ageForm <= 0) {
-                alert("please enter an age above 0 'cause u ain't 0 or below!");
-                return false;
-            }
-            if (isNaN(ageForm)) {
-                alert("please enter an actual number!");
-                return false;
-            }
+                // validates age input
+                let ageForm = document.forms.myForm.age.value;
+                if (ageForm === "") {
+                    alert("please don't leave your age blank");
+                    return false;
+                }
+                if (ageForm <= 0) {
+                    alert("please enter an age above 0 'cause u ain't 0 or below!");
+                    return false;
+                }
+                if (isNaN(ageForm)) {
+                    alert("please enter an actual number!");
+                    return false;
+                }
 
-            // states all input are valid
-            alert("all inputs are valid");
-            return true;
-        }
+                // states all input are valid
+                alert("all inputs are valid");
+                return true;
+            }
     </script>
 </body>
 
