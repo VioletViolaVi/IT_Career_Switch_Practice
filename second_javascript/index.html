@@ -61,6 +61,11 @@
         <hr>
     </section>
 
+    <section>
+        <p id="changeText">START!</p>
+        <button type="submit" onclick="changeText()">Finish</button>
+        <button type="submit" onclick="goBack()">Start</button>
+    </section>
 
     <script>
         function onOffBulb() {
@@ -114,9 +119,23 @@
             let userAge = document.getElementById("userAge");
             userAge.innerText = response;
         };
+
+        function changeText() {
+            // document.getElementById("changeText").innerHTML = "FINISH!";  /* can work this way too! */
+            let changeText = document.getElementById("changeText");
+            changeText.innerHTML = "FINISH!";
+
+            // won't work this way!
+            /* let changeText = document.getElementById("changeText").innerText
+             changeText = "FINISH!"; */
+        };
+
+        function goBack() {
+            document.getElementById("changeText").innerHTML = "START!";
+        };
     </script>
 
-    <script>
+    <!-- <script>
         document.addEventListener("DOMContentLoaded", function () {
             function paraAlert() {
                 let message = document.getElementById("paraAlert");
@@ -124,7 +143,8 @@
             };
             paraAlert();
         });
-    </script>
+    </script> -->
+    <script src="second_scritps.js"></script>
 </body>
 
 </html>
