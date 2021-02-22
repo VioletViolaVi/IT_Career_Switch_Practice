@@ -67,6 +67,30 @@
         <button type="submit" onclick="goBack()">Start</button>
     </section>
 
+    <section>
+        <br>
+        <button onclick="animalList()">animal list</button>
+        <p id="animalPara"></p>
+    </section>
+
+    <section>
+        <br>
+        <button id="foodList">food list (in console)</button>
+        <p id="foodParas"></p>
+    </section>
+
+    <section>
+        <br>
+        <button onclick="doWhileTry()">do while</button>
+        <p id="doWhileTry"></p>
+    </section>
+
+    <section>
+        <br>
+        <button onclick="forLoopFlavours()">flavours</button>
+        <p id="flavours"></p>
+    </section>
+
     <script>
         function onOffBulb() {
             let bulb = document.getElementById("bulbImage");
@@ -133,6 +157,37 @@
         function goBack() {
             document.getElementById("changeText").innerHTML = "START!";
         };
+
+        function animalList() {
+            let animals = ["dog", "cat", "mouse", "pig", "goat", "hippo"];
+            let animalList = "";
+            let number = 0;
+
+            while (number < animals.length) {
+                animalList += animals[number] + "<br>";
+                number++;
+            }
+            document.getElementById("animalPara").innerHTML = animalList;
+        }
+
+        function doWhileTry() {
+            let toBeFilled = "";
+            let num = 2;
+            do {
+                toBeFilled += `repeated ${num} times. <br>`;
+                num++;
+            } while (num < 1);
+            document.getElementById("doWhileTry").innerHTML = toBeFilled;
+        }
+
+        function forLoopFlavours() {
+            let flavoursArray = ["mint", "choco", "almond", "vanilla", "strawberry"];
+            let flavourList = "";
+            for (let i = 0; i < flavoursArray.length; i++) {
+                flavourList += flavoursArray[i] + "<br>";
+            }
+            document.getElementById("flavours").innerHTML = flavourList;
+        }
     </script>
 
     <!-- <script>

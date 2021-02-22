@@ -22,7 +22,6 @@ document.addEventListener("DOMContentLoaded", function () {
     "Salt and Vinegar",
     "Ready Salted",
   ];
-
   console.log(crispFlavours);
   console.log(crispFlavours.length);
   console.log(crispFlavours.sort());
@@ -64,7 +63,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   let first = 6;
   let second = 7;
-
   if (first === second) {
     console.log("same value and type");
   } else {
@@ -76,7 +74,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   let third = 20;
   let fourth = 20;
-
   if (third !== fourth) {
     console.log("diff nums.");
   } else {
@@ -88,17 +85,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
   let twenty = 20;
   let stringTwenty = "20";
-
   if (twenty == stringTwenty) {
     console.log("same but loosely...");
   }
-
   if (twenty === stringTwenty) {
     console.log("strictly the same!");
   } else {
     console.log("strictly NOT the same!");
   }
-
   let firstNumber = 100;
   let secondNumber = 11;
   if (firstNumber < secondNumber) {
@@ -113,7 +107,6 @@ document.addEventListener("DOMContentLoaded", function () {
   let dayIndexNum = date.getDay();
   console.log(`date: ${date}`);
   console.log(`dayIndexNum: ${dayIndexNum}`);
-
   let ukLegalAge = 18;
   let message;
   switch (ukLegalAge) {
@@ -137,20 +130,15 @@ document.addEventListener("DOMContentLoaded", function () {
   let blue = "primary colour";
   let red = "primary colour";
   let yellow = "primary colour";
-
   let green = "secondary colour";
   let orange = "secondary colour";
   let purple = "secondary colour";
-
   let purpleRed = "tertiary colour";
   let yellowGreen = "tertiary colour";
   let orangeBlue = "tertiary colour";
-
   let white = "white colour";
   let black = "black colour";
-
   let description;
-
   switch (red) {
     case "primary colour":
       description = "This is a primary colour.";
@@ -178,7 +166,6 @@ document.addEventListener("DOMContentLoaded", function () {
   let primaryColour = "primary colour";
   let secondaryColour = "secondary colour";
   let tertiaryColour = "tertiary colour";
-
   let colourEgs;
   switch ("tertiary colour") {
     case primaryColour:
@@ -211,7 +198,6 @@ document.addEventListener("DOMContentLoaded", function () {
     "white", // 9
     "black", // 10
   ];
-
   let group;
   switch (colourList[1]) {
     case "blue":
@@ -238,7 +224,6 @@ document.addEventListener("DOMContentLoaded", function () {
       break;
   }
   console.log(`Statement: ${group}`);
-
   let groupIndexing;
   switch (colourList.indexOf("orange")) {
     case 0:
@@ -272,12 +257,10 @@ document.addEventListener("DOMContentLoaded", function () {
   drinkingAge <= 18
     ? console.log("too young to drink!")
     : console.log("old enough to drink!");
-
   let votingAge = 17;
   votingAge >= 18
     ? console.log("old enough to vote")
     : console.log("not old enough to vote!");
-
   let personAge = 26;
   personAge <= 0
     ? console.log("newborn")
@@ -299,13 +282,249 @@ document.addEventListener("DOMContentLoaded", function () {
 
   let studentOne = 70;
   let studentTwo = 55;
-
   let bestStudentScore =
     studentOne > studentTwo
       ? `student one has the better score with: ${studentOne}%`
       : `student two has the better score with: ${studentTwo}%`;
-
   console.log(bestStudentScore);
+
+  /****************************************************************************************************/
+
+  let startNum = 0;
+  while (startNum < 10) {
+    console.log(`${startNum} is less than 10.`);
+    startNum++;
+  }
+
+  /****************************************************************************************************/
+
+  let foodArray = ["pizza", "burger", "chips", "noodles", "fish", "chicken"];
+  let foodList = document.getElementById("foodList");
+  let text = "";
+  foodList.addEventListener("click", function () {
+    let i = 0;
+    while (i < foodArray.length) {
+      text = foodArray[i];
+      console.log(text);
+      i++;
+    }
+  });
+
+  /****************************************************************************************************/
+
+  for (let i = 0; i < 101; i++) {
+    if (i === 57) {
+      break;
+    }
+    console.log(i);
+  }
+
+  /****************************************************************************************************/
+
+  let namesArray = [
+    "viv",
+    "ann",
+    "sam",
+    "bob",
+    "kim",
+    "computer",
+    "keys",
+    "lamp",
+    "nails",
+  ];
+  for (let i = 0; i < namesArray.length; i++) {
+    if (namesArray[i] === "computer") {
+      break; // stops at computer ie shows up till kim
+    }
+    console.log(namesArray[i]);
+  }
+
+  /****************************************************************************************************/
+
+  let furniture = [
+    "chair",
+    "table",
+    "cupboard",
+    "bed",
+    "sofa",
+    "tv",
+    "lemonade", // continue; skips past this one
+    "sink",
+    "washing machine",
+    "cooker",
+    "dish washer",
+    "oven",
+  ];
+  for (let i = 0; i < furniture.length; i++) {
+    if (furniture[i] === "lemonade") {
+      continue;
+    }
+    console.log(furniture[i]);
+  }
+
+  /****************************************************************************************************/
+
+  function multiplyNums(firstNum, secondNum) {
+    return console.log(firstNum * secondNum);
+  }
+  multiplyNums(10, 5);
+
+  function divideNums(numOne, numTwo) {
+    return console.log(numOne / numTwo);
+  }
+  divideNums(200, 200);
+
+  let adding = function addingNums(num1, num2) {
+    return console.log(num1 + num2);
+  };
+  console.log(adding);
+  adding(1, 59);
+
+  let subtracting = function subtractNums(first, second) {
+    return first - second;
+  };
+  let times100 = subtracting(10, 2) * 100;
+  console.log(times100);
+
+  function allAlphabet(a, b, c, d, e, f, g, h) {
+    return arguments.length;
+  }
+  console.log(allAlphabet(3, 3, 3, 3));
+
+  function allAlphabet2() {
+    return arguments.length;
+  }
+  console.log(allAlphabet2(3, 3));
+
+  function tooFew(a, b) {
+    if (b === undefined) {
+      b = 2;
+    }
+    return a + b;
+  }
+  console.log(tooFew(8));
+
+  function tooMany(a, b, c, d) {
+    return a + b + c + d;
+  }
+  console.log(tooMany(2, 2, 2, 2, 2, 2, 2));
+
+  function findMax() {
+    let max = -Infinity;
+    for (let i = 0; i < arguments.length; i++) {
+      if (arguments[i] > max) {
+        max = arguments[i];
+      }
+    }
+    return max;
+  }
+  final = findMax(1, 234, 500, 6789);
+  console.log(final);
+
+  let maxNum = Math.max(1, 234, 500, 6789, 0.1, 1234567);
+  console.log(maxNum);
+
+  function sumAll() {
+    let sum = 0;
+    for (let i = 0; i < arguments.length; i++) {
+      sum += arguments[i];
+    }
+    return sum;
+  }
+
+  let total = sumAll(2, 2, 2, 2, 2);
+  console.log(total);
+
+  let myObject = {
+    firstName: "jon",
+    lastName: "smith",
+    fullName: function () {
+      return `My name is ${this.firstName} ${this.lastName}. Nice to meet you!`;
+    },
+  };
+  console.log(myObject);
+  console.log(myObject.firstName);
+  console.log(myObject.lastName);
+  console.log(myObject.fullName());
+
+  let myObject2 = {
+    firstName: "ken",
+    lastName: "doodle",
+    fullName: function () {
+      return `Hello! My name is ${this.firstName} ${this.lastName}. Nice to meet you!`;
+    },
+  };
+  console.log(myObject2);
+  console.log(myObject2.firstName);
+  console.log(myObject2.lastName);
+  console.log(myObject2.fullName());
+
+  /****************************************************************************************************/
+
+  let myNonNumber = "55p";
+  let myNumber = Number(myNonNumber);
+  myNumber += 1;
+  console.log(myNumber);
+  console.log(typeof myNumber);
+
+  /****************************************************************************************************/
+
+  let aa = 10.1;
+  let b = 29;
+  let c = 78;
+
+  console.log(Math.round(aa));
+  console.log(Math.max(aa, b, c));
+  console.log(Math.min(aa, b, c));
+
+  let d = 34.0;
+  let e = 34;
+  console.log(d);
+  console.log(e);
+
+  let f = 0xbcde18;
+  console.log(f);
+
+  let g = 0.2 + 0.1;
+  console.log(g);
+
+  let h = (0.2 * 10 + 0.1 * 10) / 10;
+  console.log(h);
+
+  let i = "string";
+  if (isNaN(i)) {
+    console.log("this is not a number!");
+  }
+
+  let j = isNaN("this should show up as true");
+  console.log(j);
+
+  let k = isNaN(96);
+  console.log(k);
+
+  console.log(Math.floor(Math.random() * 12));
+
+  console.log(Math.max(1, 2, 3, 4, 5));
+  console.log(Math.floor(9.7));
+  console.log(Math.ceil(9.1));
+  console.log(Math.round(9.5));
+  console.log(Math.PI);
+  console.log(Math.sqrt(9));
+  console.log(Math.cbrt(64));
+  console.log(Math.pow(4, 4));
+  console.log(Math.SQRT2); // square root of 2
+  console.log(Math.SQRT1_2); // square root of 0.5
+
+  console.log(Number.MAX_VALUE);
+  console.log(Number.MIN_VALUE);
+
+  let l = 56789;
+  let m = l.toString();
+  console.log(m);
+  console.log(typeof m);
+  let n = 8.66499416;
+  let o = n.toFixed(1);
+  console.log(o);
 
   /****************************************************************************************************/
 });
