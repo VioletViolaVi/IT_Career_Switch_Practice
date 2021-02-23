@@ -657,4 +657,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // /****************************************************************************************************/
 
+  let paras = document.querySelector(".paras");
+  console.log(paras);
+  let firstPara =  paras.innerHTML;
+  console.log(firstPara);
+
+  // /****************************************************************************************************/
 });
