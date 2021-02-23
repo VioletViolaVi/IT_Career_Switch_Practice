@@ -91,6 +91,19 @@
         <p id="flavours"></p>
     </section>
 
+    <section>
+        <p id="aboutMe"></p>
+        <button onclick="startAboutMe()">about me</button>
+        <br>
+    </section>
+
+    <section>
+        <p id="aboutMe2"></p>
+        <p id="aboutMe3"></p>
+        <button onclick="aboutMe()">about me2</button>
+        <br>
+    </section>
+
     <script>
         function onOffBulb() {
             let bulb = document.getElementById("bulbImage");
@@ -187,6 +200,51 @@
                 flavourList += flavoursArray[i] + "<br>";
             }
             document.getElementById("flavours").innerHTML = flavourList;
+        }
+
+        function startAboutMe() {
+            function Me(fname, lname, age, dob, nationality, favFood) {
+                this.fname = fname;
+                this.lname = lname;
+                this.age = age;
+                this.dob = dob;
+                this.nationality = nationality;
+                this.favFood = favFood;
+            }
+
+            let myIntro = new Me(
+                "Traci",
+                "Braxton",
+                26,
+                "15/06/1994",
+                "British",
+                "pizza"
+            );
+
+            let sentence = `Hello my name is ${myIntro.fname} ${myIntro.lname}. I am ${myIntro.age} years old and I was born ${myIntro.dob}. I am ${myIntro.nationality} and my favourite food is ${myIntro.favFood}.`;
+            document.getElementById("aboutMe").innerHTML = sentence;
+        }
+
+        function aboutMe() {
+            function Me(fname, lname, age, dob, nationality, favFood) {
+                this.fname = fname;
+                this.lname = lname;
+                this.fullName = function () {
+                    return `${this.fname} ${this.lname}`
+                };
+                this.age = age;
+                this.dob = dob;
+                this.nationality = nationality;
+                this.favFood = favFood;
+            }
+            let sentence = new Me("Yasmine", "Golden", 25, "15/06/1995", "Mexican", "ice-cream");
+            let sentence2 = new Me("Uma", "Solid", 21, "01/01/2000", "Swiss", "gumbo");
+
+            let aboutMe2 = document.getElementById("aboutMe2");
+            let aboutMe3 = document.getElementById("aboutMe3");
+
+            aboutMe2.innerHTML = `Hello my name is ${sentence.fname} ${sentence.lname}. I am ${sentence.age} years old and I was born ${sentence.dob}. I am ${sentence.nationality} and my favourite food is ${sentence.favFood}.`
+            aboutMe3.innerHTML = `Hello my name is ${sentence2.fullName()}. I am ${sentence2.age} years old and I was born ${sentence2.dob}. I am ${sentence2.nationality} and my favourite food is ${sentence2.favFood}.`
         }
     </script>
 
