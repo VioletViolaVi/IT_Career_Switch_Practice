@@ -54,7 +54,7 @@
         <label for="drinkAge">How old are you? Are you old enough to drink?</label>
         <input type="text" name="drinkAge" id="drinkAge">
         <p id="userAge"></p>
-        <img id="winePic" width="200px" height="200px"
+        <img id="winePic" width="200" height="200"
             src="https://www.seekpng.com/png/detail/77-774152_cartoon-wine-clipart-graphic-free-download-red-wine.png"
             alt="Cartoon image of alcohol." style="display: none;">
         <button onclick="drinkAge()" type="submit">Submit</button>
@@ -114,7 +114,60 @@
         <p class="paras">para: 7</p>
     </section>
 
+    <section>
+        <p class="first"></p>
+        <p id="second"></p>
+        <a href="#hello"></a>
+        <a href="#bye"></a>
+        <a href="#no_way"></a>
+        <img src="#u_found_da_src" alt="this is the alt!" width="600" height="70">
+        <img src="#u_found_ANOTHER_src" alt="this is ANOTHER alt!" width="2" height="4">
+    </section>
+
+    <section id="sectionUnorderedList">
+        <br>
+        <button id="addItems">add items</button>
+    </section>
+
+    <section>
+        <br>
+        <button id="colourBtn">move colours</button>
+        <ul id="colourList">
+            <li>red</li>
+            <li>pink</li>
+            <li>blue</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2 onclick="this.innerHTML= 'You just clicked and changed me!' ">
+            Click to change me :)
+        </h2>
+        <h2 id="alertPara">
+            click me for an alert... if you dare!
+        </h2>
+        <h2 id="eventLisPara">
+            click to change this text to blue please
+        </h2>
+        <h5 id="h5Header">
+            double click for some more BIG practice
+        </h5>
+    </section>
+
+    <section>
+        <div onmouseover="mOver(this)" onmouseout="mOut(this)"
+            style="background-color: lime; height: 20px; padding: 40px;">
+        </div>
+        <br>
+        <div onmousedown="mDown(this)" onmouseup="mUp(this)"
+            style="background-color: lime; height: 20px; padding: 40px;">
+            hold down down on me real tight
+            but you can let go
+        </div>
+    </section>
+
     <script>
+
         function onOffBulb() {
             let bulb = document.getElementById("bulbImage");
             if (bulb.src.match("bulbOff.PNG")) {
@@ -255,6 +308,22 @@
 
             aboutMe2.innerHTML = `Hello my name is ${sentence.fname} ${sentence.lname}. I am ${sentence.age} years old and I was born ${sentence.dob}. I am ${sentence.nationality} and my favourite food is ${sentence.favFood}.`
             aboutMe3.innerHTML = `Hello my name is ${sentence2.fullName()}. I am ${sentence2.age} years old and I was born ${sentence2.dob}. I am ${sentence2.nationality} and my favourite food is ${sentence2.favFood}.`
+        }
+
+        function mOver(obj) {
+            obj.innerHTML = "your mouse is over me right now!"
+        }
+
+        function mOut(obj) {
+            obj.innerHTML = "put your mouse back over me"
+        }
+
+        function mDown(obj) {
+            obj.innerHTML = "you're pressing down on the mouse now!"
+        }
+
+        function mUp(obj) {
+            obj.innerHTML = "you released the mouse button with your finger"
         }
     </script>
 

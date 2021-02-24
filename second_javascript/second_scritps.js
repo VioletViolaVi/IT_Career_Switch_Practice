@@ -657,10 +657,233 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // /****************************************************************************************************/
 
-  let paras = document.querySelector(".paras");
-  console.log(paras);
-  let firstPara =  paras.innerHTML;
-  console.log(firstPara);
+  // let paras = document.querySelectorAll(".paras");
+  // console.log(paras);
+  // let secondPara =  paras[1];
+  // console.log(secondPara);
 
+  // let paras = document.getElementsByClassName("paras");
+  // console.log(paras);
+  // let para1 = paras[0];
+  // let para5 = paras[4];
+  // console.log(para1);
+  // console.log(para5);
+
+  // let attempt = document.getElementsByTagName("h2");
+  // console.log(attempt);
+  // console.log(attempt[1]);
+
+  // let allParas = document.getElementsByTagName("p");
+  // let gettingPara = allParas[19].getAttribute("class");
+  // let gettingParaID = allParas[20].getAttribute("id");
+  // console.log(gettingPara);
+  // console.log(gettingParaID);
+
+  // /****************************************************************************************************/
+
+  // let allAnchors = document.getElementsByTagName("a");
+  // let specificAnchors0 = allAnchors[0].getAttribute("href");
+  // let specificAnchors1 = allAnchors[1].getAttribute("href");
+  // let specificAnchors2 = allAnchors[2].getAttribute("href");
+  // console.log(specificAnchors0);
+  // console.log(specificAnchors1);
+  // console.log(specificAnchors2);
+
+  // /****************************************************************************************************/
+
+  // let allImgs = document.getElementsByTagName("img");
+  // console.log(allImgs);
+
+  // let specificImgsSrc0 = allImgs[0].getAttribute("src");
+  // let specificImgsSrc1 = allImgs[1].getAttribute("src");
+  // let specificImgsSrc2 = allImgs[2].getAttribute("src");
+  // let specificImgsSrc3 = allImgs[3].getAttribute("src");
+  // console.log(specificImgsSrc0);
+  // console.log(specificImgsSrc1);
+  // console.log(specificImgsSrc2);
+  // console.log(specificImgsSrc3);
+
+  // /****************************************************************************************************/
+
+  // let specificImgsAlt0 = allImgs[0].getAttribute("alt");
+  // let specificImgsAlt1 = allImgs[1].getAttribute("alt");
+  // let specificImgsAlt2 = allImgs[2].getAttribute("alt");
+  // let specificImgsAlt3 = allImgs[3].getAttribute("alt");
+  // console.log(specificImgsAlt0);
+  // console.log(specificImgsAlt1);
+  // console.log(specificImgsAlt2);
+  // console.log(specificImgsAlt3);
+
+  // /****************************************************************************************************/
+
+  // let specificImgsWidth0 = allImgs[0].getAttribute("width");
+  // let specificImgsWidth1 = allImgs[1].getAttribute("width");
+  // let specificImgsWidth2 = allImgs[2].getAttribute("width");
+  // let specificImgsWidth3 = allImgs[3].getAttribute("width");
+  // console.log(specificImgsWidth0);
+  // console.log(specificImgsWidth1);
+  // console.log(specificImgsWidth2);
+  // console.log(specificImgsWidth3);
+
+  // /****************************************************************************************************/
+
+  // let specificImgsHeight0 = allImgs[0].getAttribute("height");
+  // let specificImgsHeight1 = allImgs[1].getAttribute("height");
+  // let specificImgsHeight2 = allImgs[2].getAttribute("height");
+  // let specificImgsHeight3 = allImgs[3].getAttribute("height");
+  // console.log(specificImgsHeight0);
+  // console.log(specificImgsHeight1);
+  // console.log(specificImgsHeight2);
+  // console.log(specificImgsHeight3);
+
+  // /****************************************************************************************************/
+
+  // let specificId0 = allImgs[0].getAttribute("id");
+  // let specificId1 = allImgs[1].getAttribute("id");
+  // console.log(specificId0);
+  // console.log(specificId1);
+
+  // /****************************************************************************************************/
+
+  // let allImgs = document.getElementsByTagName("img");
+
+  // for (let i = 0; i < allImgs.length; i++) {
+  //   console.log(allImgs[i].getAttribute("src"));
+  // }
+
+  // for (let i = 0; i < allImgs.length; i++) {
+  //   console.log(allImgs[i].getAttribute("alt"));
+  // }
+
+  // for (let i = 0; i < allImgs.length; i++) {
+  //   console.log(allImgs[i].getAttribute("width"));
+  // }
+
+  // for (let i = 0; i < allImgs.length; i++) {
+  //   console.log(allImgs[i].getAttribute("height"));
+  // }
+
+  // for (let i = 0; i < 2; i++) {
+  //   console.log(allImgs[i].getAttribute("id"));
+  // }
+
+  // /****************************************************************************************************/
+
+  // let allAnchors = document.getElementsByTagName("a");
+
+  // for (let i = 0; i < allAnchors.length; i++) {
+  //   console.log(allAnchors[i].getAttribute("href"));
+  // }
+
+  // /****************************************************************************************************/
+
+  // let allH2 = document.getElementsByTagName("h2");
+
+  // for (let i = 0; i < allH2.length; i++) {
+  //   console.log(allH2[i]);
+  // }
+
+  // /****************************************************************************************************/
+
+  // let allParas = document.getElementsByTagName("p");
+
+  // for (let i = 0; i < allParas.length; i++) {
+  //   // console.log(allParas[i]);
+  //   console.log(allParas[i].getAttribute("class"));
+  //   if (allParas[i].getAttribute("class") === null) {
+  //     allParas[i].setAttribute("class", "orangeClass");
+  //     allParas[i].style.color = "purple";
+  //     allParas[i].style.fontWeight = "900";
+  //     allParas[i].style.fontSize = "2em";
+  //   }
+  // }
+
+  // /****************************************************************************************************/
+
+  // function addItems() {
+  //   let addItemsBtn = document.getElementById("addItems");
+
+  //   let ulElement = document.createElement("ul");
+
+  //   addItemsBtn.addEventListener("click", function () {
+  //     let listElement = document.createElement("li");
+  //     let listText = document.createTextNode("fish");
+  //     listElement.appendChild(listText); // puts <li></li> & text together (no need for variable/box)
+
+  //     let listElement2 = document.createElement("li");
+  //     let listText2 = document.createTextNode("chips");
+  //     listElement2.appendChild(listText2); // puts <li></li> & text together (no need for variable/box)
+
+  //     let listElement3 = document.createElement("li");
+  //     let listText3 = document.createTextNode("pie");
+  //     listElement3.appendChild(listText3); // puts <li></li> & text together (no need for variable/box)
+
+  //     ulElement.appendChild(listElement); // puts <ul></ul> & <li></li> together (no need for variable/box)
+  //     ulElement.appendChild(listElement2); // puts <ul></ul> & <li></li> together (no need for variable/box)
+  //     ulElement.appendChild(listElement3); // puts <ul></ul> & <li></li> together (no need for variable/box)
+
+  //     let sectionUnorderedList = document.getElementById(
+  //       "sectionUnorderedList"
+  //     );
+  //     sectionUnorderedList.appendChild(ulElement);
+  //   });
+  // }
+  // addItems();
+
+  // document.body.appendChild(document.createElement("section"));
+
+  // /****************************************************************************************************/
+
+  // function moveColours() {
+  //   let colourBtn = document.getElementById("colourBtn");
+  //   let colourList = document.getElementById("colourList");
+
+  //   colourBtn.addEventListener("click", function () {
+  //     let newLi = document.createElement("li");
+  //     let newLiText = document.createTextNode("orange");
+  //     newLi.appendChild(newLiText);
+
+  //     colourList.appendChild(newLi);
+
+  //     colourList.insertBefore(newLi, colourList.childNodes[6]);
+  //   });
+  // }
+  // moveColours();
+
+  // /****************************************************************************************************/
+
+  let alertPara = document.getElementById("alertPara");
+  alertPara.onclick = function () {
+    alert("hiya! this is your alert!");
+    this.style.color = "lime";
+  };
+
+  let eventLisPara = document.getElementById("eventLisPara");
+  eventLisPara.addEventListener("click", function () {
+    this.style.color = "blue";
+  });
+
+  let h5Header = document.getElementById("h5Header");
+
+  h5Header.addEventListener("dblclick", changeSize);
+  h5Header.addEventListener("dblclick", changeText);
+  h5Header.addEventListener("mouseover", changeWeight);
+
+  function changeSize() {
+    this.style.fontSize = "10em";
+  }
+
+  function changeText() {
+    h5Header.innerHTML = "wow you changed this text too?! you good! :)";
+  }
+
+  function changeWeight() {
+    this.style.fontWeight = "100";
+  }
+
+  // /****************************************************************************************************/
+  
+  
+  
   // /****************************************************************************************************/
 });
