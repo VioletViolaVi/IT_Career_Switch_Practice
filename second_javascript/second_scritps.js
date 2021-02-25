@@ -974,4 +974,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // /****************************************************************************************************/
   
+  /* EXTRA NOT IN HTML FILE */
+  // function sayingHello() {
+  //   let firstHeading = document.getElementById("firstHeading");
+  //   firstHeading.addEventListener("dblclick", function () {
+  //     firstHeading.innerHTML = "Goodbye World!";
+  //   });
+  // }
+  // sayingHello();
+
+  // /****************************************************************************************************/
+
 });

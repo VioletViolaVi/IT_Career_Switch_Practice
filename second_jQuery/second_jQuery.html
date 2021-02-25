@@ -6,15 +6,86 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>jQuery Practice 2</title>
+
+    <style>
+        #growingAndShrinkingBox {
+            background-color: aqua;
+            width: 6em;
+            height: 9em;
+            margin-top: 0.3em;
+        }
+    </style>
 </head>
 
 <body>
+    <section>
+        <h1 id="firstHeading">(dblclick) Hello World!</h1>
+    </section>
 
-    <!-- jQuery CDN link-->
-    <script src="https://code.jquery.com/jquery-3.5.1.js"
-        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-    <!-- custom jquery link -->
-    <script src="second_jQuery.js"></script>
+    <section id="secondSection">
+        <p>This is paragraph that will change colour.</p>
+        <p>This is paragraph that will change colour.</p>
+        <p>This is paragraph that will change colour.</p>
+        <button id="paraColoursBtn">Change x2</button>
+        <button id="alertBtn">Alert Btn</button>
+    </section>
+
+    <section>
+        <br>
+        <a id="anchorLink" href="https://www.youtube.com/" target="_blank">not a real website</a>
+    </section>
+
+    <section id="fourthSection">
+        <br>
+        <h2>Click the this to change this heading please.</h2>
+        <h2>Click the this to change this heading please.</h2>
+        <h2>Click the this to change this heading please.</h2>
+    </section>
+
+    <section id="fifthSection">
+        <p>A paragraph will be swapped for a para when clicked:</p>
+        <input id="inputId" type="text" value="this will change">
+        <button id="inputIdBtn">Click btn</button>
+    </section>
+
+    <section>
+        <h3>Append and Prepend the Ordered List</h3>
+        <button id="appendBtn">append</button>
+        <button id="prependBtn">prepend</button>
+        <button id="removeBtn">remove</button>
+        <ol>
+            <li>one</li>
+            <li>two</li>
+            <li>three</li>
+        </ol>
+    </section>
+
+    <section>
+        <button id="grow">Grow Box</button>
+        <button id="shrink">Shrink Box</button>
+        <div id="growingAndShrinkingBox"></div>
+    </section>
+
+
+    <section>
+        <!-- jQuery CDN link-->
+        <script src="https://code.jquery.com/jquery-3.5.1.js"
+            integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+        <!-- custom jquery link -->
+        <script src="second_jQuery.js"></script>
+
+        <script>
+            $("document").ready(function () {
+                function changeColour() {
+                    $("#firstHeading").click(function () {
+                        $(this).css("color", "blue").css("font-weight", "100");
+                    });
+                };
+                changeColour();
+            });
+
+        </script>
+    </section>
 </body>
 
 </html>
