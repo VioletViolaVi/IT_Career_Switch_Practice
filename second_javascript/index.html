@@ -161,13 +161,36 @@
         <br>
         <div onmousedown="mDown(this)" onmouseup="mUp(this)"
             style="background-color: lime; height: 20px; padding: 40px;">
-            hold down down on me real tight
+            hold down on me real tight
             but you can let go
         </div>
     </section>
 
-    <script>
+    <section>
+        <h2>Set Intervals</h2>
+        <p id="surprisePara"></p>
+        <button id="timeBtn">click and WAIT for a surprise!</button>
+        <button id="stopBtn">stop the interval!</button>
+    </section>
 
+    <section>
+        <h2>Set Timeouts</h2>
+        <p>check console for btn below!</p>
+        <button id="timeOutBtn">stop for timeout!</button>
+    </section>
+
+    <section>
+        <br>
+        <img src="bulbOn.PNG" alt="light bulb is on" id="lights" height="250px" width="200px">
+        <h3 id="stopLightsH3">double click me to stop the lights</h3>
+    </section>
+
+    <section>
+        <label for="#">changes to teal when clicked in</label>
+        <input onfocus="insideColour(this)" type="text">
+    </section>
+
+    <script>
         function onOffBulb() {
             let bulb = document.getElementById("bulbImage");
             if (bulb.src.match("bulbOff.PNG")) {
@@ -324,6 +347,10 @@
 
         function mUp(obj) {
             obj.innerHTML = "you released the mouse button with your finger"
+        }
+
+        function insideColour(colour) {
+            colour.style.backgroundColor = "teal";
         }
     </script>
 

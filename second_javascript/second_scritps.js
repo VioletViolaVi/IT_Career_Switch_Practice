@@ -852,38 +852,126 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // /****************************************************************************************************/
 
-  let alertPara = document.getElementById("alertPara");
-  alertPara.onclick = function () {
-    alert("hiya! this is your alert!");
-    this.style.color = "lime";
-  };
+  // let alertPara = document.getElementById("alertPara");
+  // alertPara.onclick = function () {
+  //   alert("hiya! this is your alert!");
+  //   this.style.color = "lime";
+  // };
 
-  let eventLisPara = document.getElementById("eventLisPara");
-  eventLisPara.addEventListener("click", function () {
-    this.style.color = "blue";
-  });
+  // let eventLisPara = document.getElementById("eventLisPara");
+  // eventLisPara.addEventListener("click", function () {
+  //   this.style.color = "blue";
+  // });
 
-  let h5Header = document.getElementById("h5Header");
+  // let h5Header = document.getElementById("h5Header");
 
-  h5Header.addEventListener("dblclick", changeSize);
-  h5Header.addEventListener("dblclick", changeText);
-  h5Header.addEventListener("mouseover", changeWeight);
+  // h5Header.addEventListener("dblclick", changeSize);
+  // h5Header.addEventListener("dblclick", changeText);
+  // h5Header.addEventListener("mouseover", changeWeight);
 
-  function changeSize() {
-    this.style.fontSize = "10em";
-  }
+  // function changeSize() {
+  //   this.style.fontSize = "10em";
+  // }
 
-  function changeText() {
-    h5Header.innerHTML = "wow you changed this text too?! you good! :)";
-  }
+  // function changeText() {
+  //   h5Header.innerHTML = "wow you changed this text too?! you good! :)";
+  // }
 
-  function changeWeight() {
-    this.style.fontWeight = "100";
-  }
+  // function changeWeight() {
+  //   this.style.fontWeight = "100";
+  // }
+
+  // /****************************************************************************************************/
+
+  // let timeBtn = document.getElementById("timeBtn");
+  // let stopBtn = document.getElementById("stopBtn");
+
+  // function intervalsAndTimeouts() {
+  //   let surprisePara = document.getElementById("surprisePara");
+  //   let surpriseTextContent = document.createTextNode("SURPRISE!!!");
+
+  //   timeBtn.addEventListener("click", function () {
+  //     setInterval(() => {
+  //       surprisePara.appendChild(surpriseTextContent);
+  //     }, 5000);
+  //   });
+  // }
+  // intervalsAndTimeouts();
+
+  // let continuous = setInterval(messageContainer, 3000);
+
+  // function messageContainer() {
+  //   alert("hello 3000 milliseconds later!");
+  // }
+
+  // stopBtn.addEventListener("click", function () {
+  //   clearInterval(continuous);
+  // });
+
+  // /****************************************************************************************************/
+
+  // let intervalChange = setInterval(changingBgColor, 1000);
+  // let stopBtn = document.getElementById("stopBtn");
+
+  // function changingBgColor() {
+  //   let bgColour = document.body;
+  //   bgColour.style.backgroundColor =
+  //     bgColour.style.backgroundColor === "lightgreen" ? "yellow" : "lightgreen";
+  // }
+
+  // stopBtn.addEventListener("click", function () {
+  //   clearInterval(intervalChange);
+  // });
+
+  // /****************************************************************************************************/
+
+  // setTimeout(() => {
+  //   alert("1000 milliseconds later!")
+  // }, 1000);
+
+  // let timing = setTimeout(consoleMessage, 5000);
+
+  // function consoleMessage() {
+  //   console.log("5000 milliseconds later in the console!");
+  // }
+
+  // let timeOutBtn = document.getElementById("timeOutBtn");
+  // timeOutBtn.addEventListener("click", function () {
+  //   clearTimeout(timing);
+  // });
+
+  // /****************************************************************************************************/
+
+  // let lights = document.getElementById("lights");
+
+  // let lightsSrcArray = ["bulbOn.PNG", "bulbOff.PNG"];
+  // let lightSrcIndex = 0;
+
+  // let lightsAltArray = ["light bulb is on", "light bulb is off"];
+  // let lightsAltIndex = 0;
+
+  // function changingLightImgSrcAndAlt() {
+  //   lights.setAttribute("src", lightsSrcArray[lightSrcIndex]);
+  //   lights.setAttribute("alt", lightsAltArray[lightsAltIndex]);
+  //   lightSrcIndex++;
+  //   lightsAltIndex++;
+  //   if (
+  //     lightSrcIndex >= lightsSrcArray.length &&
+  //     lightsAltIndex >= lightsAltArray.length
+  //   ) {
+  //     lightSrcIndex = 0;
+  //     lightsAltIndex = 0;
+  //   }
+  // }
+
+  // let flickeringLights = setInterval(changingLightImgSrcAndAlt, 450);
+
+  // let stopLightsH3 = document.getElementById("stopLightsH3");
+
+  // stopLightsH3.addEventListener("dblclick", function () {
+  //   clearInterval(flickeringLights);
+  // });
 
   // /****************************************************************************************************/
   
-  
-  
-  // /****************************************************************************************************/
 });
