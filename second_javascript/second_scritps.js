@@ -10,9 +10,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   /****************************************************************************************************/
 
-  let paras = document.getElementsByTagName("p");
-  console.log(paras);
-  console.log(paras[4]);
+  let paragraphs = document.getElementsByTagName("p");
+  console.log(paragraphs);
+  console.log(paragraphs[4]);
 
   /****************************************************************************************************/
 
@@ -662,9 +662,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   /****************************************************************************************************/
 
-  let paras = document.querySelectorAll(".paras");
-  console.log(paras);
-  let secondPara = paras[1];
+  let paras1 = document.querySelectorAll(".paras");
+  console.log(paras1);
+  let secondPara = paras1[1];
   console.log(secondPara);
 
   let paras = document.getElementsByClassName("paras");
@@ -678,9 +678,9 @@ document.addEventListener("DOMContentLoaded", function () {
   console.log(attempt);
   console.log(attempt[1]);
 
-  let allParas = document.getElementsByTagName("p");
-  let gettingPara = allParas[19].getAttribute("class");
-  let gettingParaID = allParas[20].getAttribute("id");
+  let allParas2 = document.getElementsByTagName("p");
+  let gettingPara = allParas2[19].getAttribute("class");
+  let gettingParaID = allParas2[20].getAttribute("id");
   console.log(gettingPara);
   console.log(gettingParaID);
 
@@ -750,34 +750,34 @@ document.addEventListener("DOMContentLoaded", function () {
 
   /****************************************************************************************************/
 
-  let allImgs = document.getElementsByTagName("img");
+  let allImgs2 = document.getElementsByTagName("img");
 
   for (let i = 0; i < allImgs.length; i++) {
-    console.log(allImgs[i].getAttribute("src"));
+    console.log(allImgs2[i].getAttribute("src"));
   }
 
   for (let i = 0; i < allImgs.length; i++) {
-    console.log(allImgs[i].getAttribute("alt"));
+    console.log(allImgs2[i].getAttribute("alt"));
   }
 
   for (let i = 0; i < allImgs.length; i++) {
-    console.log(allImgs[i].getAttribute("width"));
+    console.log(allImgs2[i].getAttribute("width"));
   }
 
   for (let i = 0; i < allImgs.length; i++) {
-    console.log(allImgs[i].getAttribute("height"));
+    console.log(allImgs2[i].getAttribute("height"));
   }
 
   for (let i = 0; i < 2; i++) {
-    console.log(allImgs[i].getAttribute("id"));
+    console.log(allImgs2[i].getAttribute("id"));
   }
 
   /****************************************************************************************************/
 
-  let allAnchors = document.getElementsByTagName("a");
+  let allAnchors1 = document.getElementsByTagName("a");
 
-  for (let i = 0; i < allAnchors.length; i++) {
-    console.log(allAnchors[i].getAttribute("href"));
+  for (let i = 0; i < allAnchors1.length; i++) {
+    console.log(allAnchors1[i].getAttribute("href"));
   }
 
   /****************************************************************************************************/
@@ -857,11 +857,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
   /****************************************************************************************************/
 
-  let alertPara = document.getElementById("alertPara");
-  alertPara.onclick = function () {
-    alert("hiya! this is your alert!");
-    this.style.color = "lime";
-  };
+  // let alertPara = document.getElementById("alertPara");
+  // alertPara.onclick = function () {
+  //   alert("hiya! this is your alert!");
+  //   this.style.color = "lime";
+  // };
 
   let eventLisPara = document.getElementById("eventLisPara");
   eventLisPara.addEventListener("click", function () {
@@ -903,90 +903,127 @@ document.addEventListener("DOMContentLoaded", function () {
   }
   intervalsAndTimeouts();
 
-  let continuous = setInterval(messageContainer, 3000);
+  // let continuous = setInterval(messageContainer, 3000);
 
-  function messageContainer() {
-    alert("hello 3000 milliseconds later!");
-  }
+  // function messageContainer() {
+  //   alert("hello 3000 milliseconds later!");
+  // }
 
-  stopBtn.addEventListener("click", function () {
-    clearInterval(continuous);
-  });
-
-  /****************************************************************************************************/
-
-  let intervalChange = setInterval(changingBgColor, 1000);
-  let stopBtn = document.getElementById("stopBtn");
-
-  function changingBgColor() {
-    let bgColour = document.body;
-    bgColour.style.backgroundColor =
-      bgColour.style.backgroundColor === "lightgreen" ? "yellow" : "lightgreen";
-  }
-
-  stopBtn.addEventListener("click", function () {
-    clearInterval(intervalChange);
-  });
+  // stopBtn.addEventListener("click", function () {
+  //   clearInterval(continuous);
+  // });
 
   /****************************************************************************************************/
 
-  setTimeout(() => {
-    alert("1000 milliseconds later!");
-  }, 1000);
+  // let intervalChange = setInterval(changingBgColor, 1000);
+  // let stopBtn2 = document.getElementById("stopBtn");
 
-  let timing = setTimeout(consoleMessage, 5000);
+  // function changingBgColor() {
+  //   let bgColour = document.body;
+  //   bgColour.style.backgroundColor =
+  //     bgColour.style.backgroundColor === "lightgreen" ? "yellow" : "lightgreen";
+  // }
 
-  function consoleMessage() {
-    console.log("5000 milliseconds later in the console!");
-  }
-
-  let timeOutBtn = document.getElementById("timeOutBtn");
-  timeOutBtn.addEventListener("click", function () {
-    clearTimeout(timing);
-  });
+  // stopBtn2.addEventListener("click", function () {
+  //   clearInterval(intervalChange);
+  // });
 
   /****************************************************************************************************/
 
-  let lights = document.getElementById("lights");
+  // setTimeout(() => {
+  //   alert("1000 milliseconds later!");
+  // }, 1000);
 
-  let lightsSrcArray = ["bulbOn.PNG", "bulbOff.PNG"];
-  let lightSrcIndex = 0;
+  // let timing = setTimeout(consoleMessage, 5000);
 
-  let lightsAltArray = ["light bulb is on", "light bulb is off"];
-  let lightsAltIndex = 0;
+  // function consoleMessage() {
+  //   console.log("5000 milliseconds later in the console!");
+  // }
 
-  function changingLightImgSrcAndAlt() {
-    lights.setAttribute("src", lightsSrcArray[lightSrcIndex]);
-    lights.setAttribute("alt", lightsAltArray[lightsAltIndex]);
-    lightSrcIndex++;
-    lightsAltIndex++;
-    if (
-      lightSrcIndex >= lightsSrcArray.length &&
-      lightsAltIndex >= lightsAltArray.length
-    ) {
-      lightSrcIndex = 0;
-      lightsAltIndex = 0;
-    }
-  }
+  // let timeOutBtn = document.getElementById("timeOutBtn");
+  // timeOutBtn.addEventListener("click", function () {
+  //   clearTimeout(timing);
+  // });
 
-  let flickeringLights = setInterval(changingLightImgSrcAndAlt, 450);
+  /****************************************************************************************************/
 
-  let stopLightsH3 = document.getElementById("stopLightsH3");
+  // let lights = document.getElementById("lights");
 
-  stopLightsH3.addEventListener("dblclick", function () {
-    clearInterval(flickeringLights);
-  });
+  // let lightsSrcArray = ["bulbOn.PNG", "bulbOff.PNG"];
+  // let lightSrcIndex = 0;
+
+  // let lightsAltArray = ["light bulb is on", "light bulb is off"];
+  // let lightsAltIndex = 0;
+
+  // function changingLightImgSrcAndAlt() {
+  //   lights.setAttribute("src", lightsSrcArray[lightSrcIndex]);
+  //   lights.setAttribute("alt", lightsAltArray[lightsAltIndex]);
+  //   lightSrcIndex++;
+  //   lightsAltIndex++;
+  //   if (
+  //     lightSrcIndex >= lightsSrcArray.length &&
+  //     lightsAltIndex >= lightsAltArray.length
+  //   ) {
+  //     lightSrcIndex = 0;
+  //     lightsAltIndex = 0;
+  //   }
+  // }
+
+  // let flickeringLights = setInterval(changingLightImgSrcAndAlt, 450);
+
+  // let stopLightsH3 = document.getElementById("stopLightsH3");
+
+  // stopLightsH3.addEventListener("dblclick", function () {
+  //   clearInterval(flickeringLights);
+  // });
 
   /****************************************************************************************************/
 
   /* EXTRA NOT IN HTML FILE */
-  function sayingHello() {
-    let firstHeading = document.getElementById("firstHeading");
-    firstHeading.addEventListener("dblclick", function () {
-      firstHeading.innerHTML = "Goodbye World!";
-    });
-  }
-  sayingHello();
+  // function sayingHello() {
+  //   let firstHeading = document.getElementById("firstHeading");
+  //   firstHeading.addEventListener("dblclick", function () {
+  //     firstHeading.innerHTML = "Goodbye World!";
+  //   });
+  // }
+  // sayingHello();
+
+  /****************************************************************************************************/
+
+  let numberBtn = document.getElementById("numberBtn");
+  let response;
+
+  numberBtn.addEventListener("click", function () {
+    let numberInput = document.getElementById("numberInput").value;
+    function numberFormInput() {
+      if (isNaN(numberInput) || numberInput < 1 || numberInput > 27) {
+        response = numberInput + " is an invalid input!";
+      } else {
+        response = `${numberInput} is an okay input!`;
+      }
+      document.getElementById("inputResponse").innerHTML = response;
+    }
+    numberFormInput();
+  });
+
+  /****************************************************************************************************/
+
+  let changeParaSentenceBtn = document.getElementById("changeParaSentenceBtn");
+  let changeParaSentence = document.getElementById("changeParaSentence");
+
+  changeParaSentenceBtn.addEventListener("click", function () {
+    console.log(changeParaSentence);
+    changeParaSentence.innerHTML = "yay! you changed this sentence!";
+  });
+
+  let changeParaSentenceBackBtn = document.getElementById(
+    "changeParaSentenceBackBtn"
+  );
+
+  changeParaSentenceBackBtn.addEventListener("click", function () {
+    console.log(changeParaSentence);
+    changeParaSentence.innerHTML = "change this with js please";
+  });
 
   /****************************************************************************************************/
 });
