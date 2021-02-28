@@ -64,11 +64,75 @@
         table#t01 tbody .ownColour td {
             color: white;
         }
+
+        .h {
+            list-style-type: hiragana;
+        }
+
+        .paraPlus+p {
+            /* "+" selector targets 1st element, of same level, under it*/
+            background-color: yellow;
+        }
+
+        .paraChild>p {
+            background-color: red;
+        }
+
+        .paraChild>p::first-line {
+            background-color: greenyellow;
+        }
+
+        .paraSibling~p {
+            background-color: blue;
+        }
+
+        .paraSibling~p::first-letter {
+            color: orange;
+        }
     </style>
 </head>
 
 <body>
+    <div>
+        <p class="paraSibling">This is skipped for blue!</p>
+        <p>Hello are these siblings?</p>
+        <p>Hello are these siblings?</p>
+        <p>Hello are these siblings?</p>
+    </div>
 
+    <div class="paraChild">
+        <p>Hello is this highlighted?</p>
+        <p>Hello is this highlighted?</p>
+        <p>Hello is this highlighted?</p>
+        <span>Hi this wont be highlighted as it's not a p element.</span>
+    </div>
+
+    <div class="paraPlus">
+        <p class="paraPlus">Hello is this highlighted? NO!</p>
+        <p>Hello is this highlighted? YES!</p>
+        <p>Hello is this highlighted? NO!</p>
+    </div>
+    <p>Hello is this highlighted? YES!</p><!-- yes THIS one is (outside the above div) -->
+
+    <div>
+        <ol class="h">
+            <li>one</li>
+            <li>two</li>
+            <li>three</li>
+        </ol>
+    </div>
+
+    <div>
+        <form action="../first_jquery/jquery.html" oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+            <input type="date" name="date" id="date" min="2021-02-26" max="2021-03-29">
+            <input type="range" value="25" name="a" id="a">
+            +
+            <input type="range" value="25" name="b" id="b">
+            =
+            <output name="x" for="a b"></output>
+            <button type="submit">submit</button>
+        </form>
+    </div>
     <!-- html5 practice -->
     <div>
         <section class="city">
