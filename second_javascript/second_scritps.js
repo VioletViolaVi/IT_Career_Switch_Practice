@@ -1026,4 +1026,22 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   /****************************************************************************************************/
+
+  let concat = "pie " + (10 + 10);
+  console.log(concat);
+
+  /****************************************************************************************************/
+
+  let sentenceLong =
+    "hero is my middle name fixing people is my game just give it a good know how it all started off from now don't give up and don't give in!";
+  console.log(sentenceLong.search("middle"));
+  console.log(sentenceLong.slice(12, 37));
+  console.log(sentenceLong.indexOf(" "));
+
+  let shortSentence = "hello girl";
+  console.log(shortSentence.substring(10, 5));
+
+  let replacedSentence = sentenceLong.replace(sentenceLong, shortSentence);
+  console.log(replacedSentence);
+  /****************************************************************************************************/
 });
