@@ -1,0 +1,252 @@
+body {
+    background-color: #eeeeee;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    cursor: default;
+    /* background-image: url(food.jpg);
+    background-size: 57em 25em;
+    background-repeat: no-repeat; */
+}
+
+details {
+    margin-bottom: 5em;
+}
+
+#vid {
+    transform: rotate(30deg);
+}
+
+#sound {
+    transform: rotate(-70deg);
+}
+
+table {
+    margin: 2em auto;
+    background-color: lightyellow;
+    padding: 1em 2em;
+    border: solid forestgreen 0.2em;
+    /* border-collapse: collapse; */
+    width: 80%;
+    border-spacing: 1em;
+}
+
+th, td {
+    padding: 1em;
+}
+
+th {
+    border: solid 0.2em chartreuse;
+    padding: 1em;
+}
+
+td {
+    border: solid 0.2em deeppink;
+}
+
+th:first-child {
+    background-color: orange;
+}
+
+th:nth-child(2) {
+    background-color: khaki;
+}
+
+th:last-child {
+    background-color: indianred;
+}
+
+td:first-child {
+    background-color: teal;
+}
+
+td:nth-child(2) {
+    background-color: mediumorchid;
+}
+
+td:last-child {
+    background-color: wheat;
+}
+
+dt {
+    border-bottom: solid paleturquoise 0.1em;
+    font-weight: 900;
+}
+
+.flex_or_grid_container.container {
+    padding: 0em;
+}
+
+.flex_or_grid_container {
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    /* flex-direction: row; AND flex-wrap: wrap; */
+    /* flex-flow: row wrap; */
+    /* grid-row-gap: 0.1em; AND grid-column-gap: 2em; */
+    /* grid-gap: 0.1em 2em; */
+    display: inline-grid;
+    grid-gap: 0.2em;
+    grid-template-columns: 20em auto auto 13em auto;
+}
+
+.flex_or_grid_items {
+    padding: 2.5em;
+    margin: 0.5em;
+    background-color: greenyellow;
+    font-size: 1.1em;
+    font-weight: 900;
+}
+
+.six {
+    grid-row-start: 2;
+    grid-row-end: 5;
+}
+
+.eight {
+    grid-column: 2 / 4;
+}
+
+.ten {
+    grid-row: 1 / 4;
+}
+
+.tweleve {
+    grid-column-start: 3;
+    grid-column-end: 6;
+}
+
+.fourteen {
+    grid-area: 2 / 1 / 6 / 3;
+}
+
+.sixteen {
+    grid-row: 1 / span 4;
+}
+
+.twenty {
+    grid-column: 3 / span 4;
+}
+
+/* #one {
+    order: 3; */
+
+/* flex-grow: 3; AND flex-shrink: 6; AND flex-basis:200px; */
+
+/* flex: 3 6 200px;
+}
+
+#two {
+    order: 1;
+    flex-grow: 5;
+    align-self: flex-start;
+}
+
+#three {
+    order: 2;
+    flex-grow: 5;
+    align-self: flex-end;
+} */
+
+.floatingNav {
+    float: left;
+    border: solid;
+    width: 5em;
+    height: 18em;
+}
+
+.main p {
+    margin-left: 6em;
+    text-align: left;
+}
+
+#skills {
+    width: 30em;
+    height: 1.5em;
+}
+
+.container, #container1, #container2, #container3, #container4 {
+    padding: 2em;
+    margin-bottom: 2em;
+}
+
+.container {
+    background-image: linear-gradient(red, yellow);
+}
+
+#container1 {
+    background-image: repeating-linear-gradient(to right, pink 40%, purple 60%);
+}
+
+#container2 {
+    background-image: linear-gradient(to left, green, rgba(0, 0, 255, 0.048));
+}
+
+#container3 {
+    background-image: linear-gradient(to bottom left, grey, orange);
+}
+
+#container4 {
+    background-image: linear-gradient(to bottom right, red, yellow, pink, green, violet, purple, blue, gold);
+}
+
+.imgLink {
+    display: inline;
+}
+
+.imgLink1, .imgLink2 {
+    border: solid black 0.3em;
+    margin-bottom: 1em;
+}
+
+.foodImg {
+    width: 45em;
+    height: 28em;
+}
+
+area {
+    outline-color: darkgreen;
+}
+
+area:hover, area:active, area:focus {
+    outline-color: orange;
+}
+
+.img {
+    width: 6em;
+}
+
+#navContainer {
+    /* background-color: pink; */
+    background-color: hsl(312, 89%, 64%);
+}
+
+h1 {
+    background-color: darkgoldenrod;
+    color: darkgreen;
+    text-indent: 1em;
+    opacity: 0.4;
+}
+
+h1:hover {
+    color: blue;
+}
+
+h1:active {
+    color: pink;
+}
+
+h2 {
+    color: darkorange;
+    text-shadow: 1em 1em 1em white;
+}
+
+.header-styled {
+    color: darkolivegreen;
+    font-weight: 900;
+    text-shadow: 1em 1em 1em blue;
+}
+
+.thisOne {
+    background-color: magenta;
+    opacity: 0.587412526426251;
+}
