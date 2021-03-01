@@ -93,6 +93,12 @@
 </head>
 
 <body>
+
+    <div>
+        <p id="errorAlert"></p>
+        <p id="drinks"></p>
+    </div>
+
     <div>
         <p class="paraSibling">This is skipped for blue!</p>
         <p>Hello are these siblings?</p>
@@ -560,11 +566,46 @@
             <button id="changeParaSentenceBtn">change btn</button>
             <button id="changeParaSentenceBackBtn">change BACK btn</button>
         </section>
+
+
+        <div>
+            <br>
+            <label for="age">Please enter your age but DON'T put 400!</label>
+            <p id="errorMessagePara"></p>
+            <input type="text" id="userInput">
+            <button onclick="errorTesting()">Test Button</button>
+        </div>
+
     </div>
 
     <!-- scripts -->
     <section>
         <script>
+
+            function errorTesting() {
+                let errorMessagePara = document.getElementById("errorMessagePara");
+                errorMessagePara.innerHTML = "";
+
+                let userInput = document.getElementById("userInput").value;
+
+                try {
+                    if (isNaN(userInput)) {
+                        throw "This is not a number!";
+                    }
+                    if (userInput === "") {
+                        throw "You have entered nothing!";
+                    }
+                    if (userInput === "400") {
+                        throw 400 + " is not allowed! Don't you listen?";
+                    }
+                } catch (error) {
+                    errorMessagePara.innerHTML = `The message is... ${error}`;
+                }
+                // finally {
+                //     errorMessagePara.innerHTML = "This is from the finally code block!";
+                // }
+            }
+
             function onOffBulb() {
                 let bulb = document.getElementById("bulbImage");
                 if (bulb.src.match("bulbOff.PNG")) {
@@ -729,14 +770,31 @@
         </script>
 
         <!-- <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            function paraAlert() {
-                let message = document.getElementById("paraAlert");
-                alert(message.innerText);
-            };
-            paraAlert();
-        });
-    </script> -->
+            document.addEventListener("DOMContentLoaded", function () {
+                function paraAlert() {
+                    try {
+                        let message = document.getElementById("paraAlert");
+                        thisAIsWrittenWrong(message.innerText);
+                    } catch (error) {
+                        document.getElementById("errorAlert").innerHTML = "there was an error with the alert!";
+                    }
+                };
+                paraAlert();
+            });
+
+            document.addEventListener("DOMContentLoaded", function () {
+                function paraAlert() {
+                    try {
+                        if (isNaNeThisIsAlsoNotWrittenRight("hello")) {
+                            document.getElementById("errorAlert").innerHTML = "this should not be showing!";
+                        };
+                    } catch (error) {
+                        document.getElementById("errorAlert").innerHTML = "this is not correct!";
+                    }
+                };
+                paraAlert();
+            });
+        </script> -->
         <script src="second_scritps.js"></script>
     </section>
 </body>
