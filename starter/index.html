@@ -11,434 +11,1095 @@
     <title>Practice: IT Career Switch</title>
 
     <style>
-        canvas {
+        /* canvas {
             border: 2px solid green;
         }
 
         #pointer {
             cursor: pointer;
+        } */
+
+        /* input[type="checkbox"]:required:invalid+label {
+            color: red;
         }
+
+        input[type="checkbox"]:required {
+            display: none;
+        }
+
+        input[type="checkbox"]:required:invalid+label::before {
+            content: "\2610";
+            padding-right: 0.2em;
+            font-size: 1.6em;
+            color: red;
+        }
+
+        input[type="checkbox"]:required:valid+label::before {
+            content: "\2611";
+            padding-right: 0.2em;
+            font-size: 1.6em;
+            color: green;
+        }
+
+        input[type="checkbox"]:required:valid+label {
+            color: green;
+        } */
+
+        /* input:required:valid {
+            background-image: url(media/food7.jpg);
+            background-position: right top;
+            background-repeat: no-repeat;
+            color: white;
+            background-color: blue;
+            font-size: medium;
+        }
+
+        input:required:invalid,
+        input:focus:invalid {
+            background-image: url(media/food1.jpg);
+            background-position: right top;
+            background-repeat: no-repeat;
+            color: white;
+            background-color: black;
+            font-size: small;
+        } */
+
+        /* * {
+            margin: 0em;
+            padding: 0em;
+            background-color: white;
+        }
+
+        h1 {
+            color: white;
+            background-color: black;
+        }
+
+        #myParaId {
+            color: red;
+        }
+
+        .myParaClass {
+            color: green;
+        }
+
+        a[href$=".jpg"] {
+            color: white;
+            background-color: black;
+        } */
+
+        /* ~ means target any "<a data-filetype="">" element that has the word "image" in it */
+        /* a[data-filetype~="image"] {
+            color: orange;
+            background-color: red;
+        } */
+
+        /* input[type="radio"]:checked {
+            border: 1px solid blue;
+        }
+
+        input[type="checkbox"]:checked {
+            border: 2px solid firebrick;
+            color: fuchsia;
+        }
+
+        .clearFix::after {
+            content: "";
+            display: block;
+            clear: both;
+            visibility: hidden;
+            font-size: 0;
+            height: 0;
+        }
+
+        div:hover {
+            background-color: greenyellow;
+            color: indigo;
+            border-bottom: 10px dotted red;
+        }
+
+        div:not(#noSelect) {
+            background-color: goldenrod;
+            color: violet;
+        }
+
+        p::first-line {
+            font-weight: bold;
+            color: black;
+            font-size: 1.2em;
+        } */
+
+        /* li:first-child {
+            color: yellow;
+        }
+
+        li:nth-child(3) {
+            color: red;
+        }
+
+        li:last-child {
+            color: blue;
+        }
+
+        ol {
+            width: 200px;
+            background: green;
+            list-style: none;
+            padding-left: 0;
+            font-size: xx-large;
+        }
+
+        li {
+            padding: 10px;
+            border-bottom: 1px solid black;
+            border-top: 1pc solid purple;
+        }
+
+        div p:only-child{
+            color: palegreen;
+        } */
+
+        /* .effectOne h3 {
+            text-align: center;
+            position: relative;
+            top: 80px;
+        }
+
+        .effectOne {
+            -webkit-box-shadow: 0 10px 6px #777;
+            -moz--webkit-box-shadow: 0 10px 6px -6px #777;
+            box-shadow: 0 10px 6px -6px #777;
+        }
+
+        .effectOne::before,
+        .effectOne::after {
+            z-index: -1;
+            position: absolute;
+            content: "";
+            bottom: 15px;
+            left: 10px;
+            width: 50%;
+            top: 80%;
+            max-width: 300px;
+            background: #777;
+            -webkit-box-shadow: 0 15px 10px #777;
+            -moz-box-shadow: 0 15px 10px #777;
+            box-shadow: 0 15px 10px #777;
+            -webkit-transform: rotate(-3deg);
+            -moz-transform: rotate(-3deg);
+            -o-transform: rotate(-3deg);
+            -ms-transform: rotate(-3deg);
+            transform: rotate(-3deg);
+        } */
+
+        /* .effectOne::before {
+            -webkit-box-shadow: 0 0 20px #333 inset,
+                20px 15px 30px yellow,
+                -20px 15ps 30px lime,
+                20px -15px 30px red;
+            -moz-box-shadow: 0 0 20px #333 inset,
+                20px 15px 30px yellow,
+                -20px 15ps 30px lime,
+                20px -15px 30px red;
+            box-shadow: 0 0 20px #333 inset,
+                20px 15px 30px yellow,
+                -20px 15ps 30px lime,
+                20px -15px 30px red;
+        } */
     </style>
 </head>
 
 <body>
 
+
     <div>
 
-        <details>
-            <summary>Click to Reveal the text!</summary>
-            <p>This is the hidden text that you have now revealed!</p>
-        </details>
+        <!-- <div class="effectOne">
+        <h3>my 1st effect</h3>
+    </div>
+    <div class="effectTwo">
+        <h3>my 2nd effect</h3>
+    </div> -->
 
-        <video id="vid" height="150" controls poster="media/food1.jpg">
-            <source src="media/beachVid.mp4" type="video/mp4">
-            <!-- you should the same video from 2 different sources however -->
-            Your browser does not support video elements. Oh well!
-        </video>
 
-        <audio id="sound" controls autoplay muted>
-            <source src="media/gameover.wav" type="audio/mp4">
-            <!-- you should the same audio from 2 different sources however -->
-            Your browser does not support audio elements. Oh well!
-        </audio>
+
+        <!-- <div>
+        <p>para inside of div</p>
     </div>
 
     <div>
-        <table>
-            <caption>Food And Drink!</caption>
-            <tr>
-                <th colspan="5" rowspan="2">Fruit</th>
-                <th colspan="3">Veg</th>
-                <th>Drinks</th>
-            </tr>
-
-            <tr>
-                <td>Apple</td>
-                <td>Sweetcorn</td>
-                <td rowspan="5">Water</td>
-            </tr>
-
-            <tr>
-                <td>Pear</td>
-                <td>Kale</td>
-                <td>Juice</td>
-            </tr>
-
-            <tr>
-                <td>Lemon</td>
-                <td rowspan="3">Cabbage</td>
-                <td>Wine</td>
-            </tr>
-
-            <tr>
-                <td>Kiwi</td>
-                <td>Carrot</td>
-                <td colspan="5">
-                    <dl>
-                        <dt>Fizzy Pop</dt>
-                        <dd>Fanta</dd>
-                        <dd>Sprite</dd>
-                        <dd>Cola</dd>
-                    </dl>
-                </td>
-            </tr>
-        </table>
+        <p>2nd para inside of div</p>
+        <p>3rd para inside of div</p>
     </div>
 
-    <div class="flex_or_grid_container container">
-        <div id="one" class="flex_or_grid_items">1</div>
-        <div id="two" class="flex_or_grid_items">2</div>
-        <div id="three" class="flex_or_grid_items">3</div>
-        <div class="flex_or_grid_items">4</div>
-        <div class="flex_or_grid_items">5</div>
-        <div class="six flex_or_grid_items">6</div>
-        <div class="flex_or_grid_items">7</div>
-        <div class="eight flex_or_grid_items">8</div>
-        <div class="flex_or_grid_items">9</div>
-        <div class="ten flex_or_grid_items">10</div>
-        <div class="flex_or_grid_items">11</div>
-        <div class="tweleve flex_or_grid_items">12</div>
-        <div class="flex_or_grid_items">13</div>
-        <div class="fourteen flex_or_grid_items">14</div>
-        <div class="flex_or_grid_items">15</div>
-        <div class="sixteen flex_or_grid_items">16</div>
-        <div class="flex_or_grid_items">17</div>
-        <div class="flex_or_grid_items">18</div>
-        <div class="flex_or_grid_items">19</div>
-        <div class="twenty flex_or_grid_items">20</div>
-    </div>
+    <ol>
+        <li>one</li>
+        <li>two</li>
+        <li>three</li>
+        <li>four</li>
+    </ol> -->
 
-    <div>
-        <picture>
-            <source media="(min-width:1366px)" srcset="media/food1.jpg">
-            <source media="(min-width:1200px)" srcset="media/food2.jpg">
-            <source media="(min-width:992px)" srcset="media/food3.jpg">
-            <source media="(min-width:768px)" srcset="media/food4.jpg">
-            <source media="(min-width:576px)" srcset="media/food5.jpg">
-            <source media="(min-width:320px)" srcset="media/food6.jpg">
-            <img src="media/food7.jpg" alt="food" width="500em">
-        </picture>
+        <!-- <div>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum optio excepturi rerum nihil quos architecto
+            eos expedita eligendi perferendis sed esse quisquam beatae, pariatur debitis ut enim dolor illum. Suscipit?
+            Excepturi modi est fuga magnam omnis repellendus suscipit eius cum, rerum optio in sit officiis iusto
+            asperiores dolore eveniet odio voluptatum maiores magni sint laudantium aperiam, provident expedita.
+            Nesciunt, modi!
+        </p>
+        <p id="noSelect">this is a para with id noSelect</p>
+        <p class="clearFix">some data:</p>
+        <input type="text" name="clearFixInput" id="clearFixInput">input
     </div>
+    <p class="clearFix">this is a class para with some text</p> -->
 
-    <div>
+        <!-- <a data-filetype="internal image" href="media/food2.jpg">Image 2</a>
+        <a data-filetype="external image" href="media/food4.jpg">Image 4</a>
+
+        <br><br>
+
+        <label for="ranking">Ranking</label>
+        <input type="radio" name="ranking" id="ranking">High
+        <input type="radio" name="ranking" id="ranking">Medium
+        <input type="radio" name="ranking" id="ranking">Low
+
+        <br><br>
+
+        <label for="style">Style</label>
+        <input type="checkbox" name="style" id="style">Modern
+        <input type="checkbox" name="style" id="style">Classic
+        <input type="checkbox" name="style" id="style">Western
+
+        <br> <br>
+
+
+
+        <h1>This is a heading</h1>
+        <p>This is a paragraph</p>
+        <p id="myParaId">This is a paragraph with an id</p>
+        <p class="myParaClass">This is a paragraph with an class</p>
+
+
+        <form onsubmit="return checkForm(this)" action="">
+            <label for="dob">Date Of Birth</label>
+            <input type="date" name="dob" id="dob">
+            <br>
+            <label for="startTime">start time</label>
+            <input type="text" name="startTime" id="startTime">
+            <br>
+            <button type="submit">submit</button>
+        </form>
+
+
+        <h1>Registration Form</h1> -->
+
+        <!-- <form onsubmit="return checkForm(this);" style="text-align: left;"> -->
+        <!-- <form id="data" onsubmit="return checkForm(this);" style="text-align: left;">
+            <br>
+
+            <label for="terms">I accept the <u>terms and conditions</u>.</label>
+            <input type="checkbox" name="terms" id="terms" required>
+            <br>
+
+            <button type="submit">accept</button>
+
+            <br> -->
+
+        <!-- <label for="terms">I accept the <u>terms and conditions</u>.</label>
+        <input
+            onchange="this.setCustomValidity(validity.valueMissing ? 'Please indicate that you accept the t\'s and c\'s!': '' );"
+            type="checkbox" name="terms" id="terms" required>
+        <br>
+
+        <label for="box">I accept the terms and conditions.</label>
+        <input type="checkbox" name="box" id="box" required>
+
+        <br>
+
+        <label for="username">username</label>
+        <input required pattern="\w+" type="text" name="username" id="username" placeholder="please enter a username">
+
+            
+        <label for="password">password</label>
+        <input required pattern="(?=.*\d) (?=.*[a-z]) (?=.*[A-Z]).{6,}" type="password" name="password" id="password" placeholder="please enter a password">
+
+        <br>
+
+        <label for="password2">confirm password</label>
+        <input required pattern="(?=.*\d) (?=.*[a-z]) (?=.*[A-Z]).{6,}"  type="password" name="password2" id="password2" placeholder="please enter a password again">
+
+        <br>
+
+        <label for="fname">first name</label>
+        <input type="text" name="fname" id="fname" placeholder="please enter first name">
+
+        <br>
+        
+        <label for="lname">last name</label>
+        <input type="text" name="lname" id="lname" required placeholder="please enter last name">
+
+        <br>
+
+        <label for="email">email</label>
+        <input type="email" name="email" id="email" required placeholder="please enter email">
+
+        <br>
+
+        <label for="age">age</label>
+        <input min="1" max="99" type="number" name="age" id="age" required placeholder="please enter a age">
+
+        <br>
+
+        <label for="phone_number">phone number</label>
+        <input type="tel" name="phone_number" id="phone_number" required placeholder="please enter a phone number">
+
+        <br>
+
+        <label for="satisfaction">rate your satisfaction</label>
+        <input min="1" max="5" type="range" name="satisfaction" id="satisfaction" required
+            placeholder="please enter your satisfaction">
+        <br>
+
+        <label for="url">url</label>
+        <input type="url" name="url" id="url" required placeholder="please enter a url"> -->
+        <!-- </form>
 
         <nav>
-            Home | Shop | Contact
+            <ul style="list-style-type: none;">
+                <a href="#" style="text-decoration: none;">
+                    <li style="display: inline;">home |</li>
+                </a>
+                <a href="#" style="text-decoration: none;">
+                    <li style="display: inline;">about us |</li>
+                </a>
+                <a href="#" style="text-decoration: none;">
+                    <li style="display: inline;">contact us</li>
+                </a>
+            </ul>
         </nav>
+
+        <ruby style="display: block;">
+            <rt>平仮名,ひらがな</rt>
+        </ruby>
+
+        <time datetime="01-03-2021">March 1<sup>st</sup> 2021!</time>
+
+        <article>
+            <h1>This is a heading for in article element.</h1>
+            <p>This is a paragraph for in article element.</p>
+        </article>
 
         <aside>
-            This is the aside.
+            <p>This is a paragraph in the aside element.</p>
         </aside>
 
+        <details>
+            <summary>This is a summary in the details element.</summary>
+            <p>This is a paragraph in the summary element.</p>
+        </details>
+
         <main>
-            This is the main.
+            <p>This is a paragraph in the main element.</p>
         </main>
+
+        <mark>This was marked with the mark element</mark>
 
         <footer>
-            Copyright &copy;
+            This the the footer element.
         </footer>
-
-    </div>
-
-    <div>
-
-        <div id="wrapper">
-            <header>
-                <h1>Layout Example</h1>
-            </header>
-            <nav class="floatingNav">
-                <a href="index.html">Home</a>
-                <a href="#">Page 1</a>
-                <a href="#">Page 2</a>
-                <a href="#">Page 3</a>
-                <a href="#">Page 4</a>
-                <a href="#">Page 5</a>
-                <a href="#">Page 6</a>
-                <a href="#">Page 7</a>
-                <a href="#">Page 8</a>
-                <a href="#">Page 9</a>
-                <a href="#">Page 10</a>
-            </nav>
-            <main class="main">
-                <h2>Page Heading</h2>
-                <p>This is a sentence. This is a sentence. This is a sentence. This is a sentence. This is a sentence.
-                    This is a sentence. This is a sentence. This is a sentence. This is a sentence. This is a sentence.
-                    This is a sentence. This is a sentence. This is a sentence. This is a sentence. This is a sentence.
-                    This is a sentence. This is a sentence. This is a sentence. This is a sentence. This is a sentence.
-                    This is a sentence. This is a sentence. This is a sentence. This is a sentence.
-                    This is a sentence. This is a sentence. This is a sentence. This is a sentence. This is a sentence.
-                    This is a sentence. This is a sentence. This is a sentence. This is a sentence. This is a sentence.
-                    This is a sentence. This is a sentence. This is a sentence. This is a sentence. This is a sentence.
-                    This is a sentence. This is a sentence. This is a sentence. This is a sentence. This is a sentence.
-                    This is a sentence. This is a sentence. This is a sentence. This is a sentence.
-                </p>
-            </main>
-            <footer>Copyright © 2018</footer>
-        </div>
-
-        <h2>My Skills! </h2>
-
-        <div class="container">
-            default (top to down)
-            <br>
-            red, yellow
-            <br>
-            <br>
-
-            <label for="skills">HTML5</label>
-            <meter id="skills" value="0.95">This doesn't show???</meter>
-
-            <br>
-
-            <label for="skills">CCS3</label>
-            <meter id="skills" value="9" min="0" max="10">This doesn't show???</meter>
-
-            <br>
-
-            <label for="skills">JavaScript ES6</label>
-            <progress id="skills" value="5" min="0" max="10">This doesn't show???</progress>
-
-            <br>
-
-            <label for="skills">Python</label>
-            <progress id="skills" value="3" min="0" max="10">This doesn't show???</progress>
-
-            <br>
-        </div>
-
-        <div id="container1">
-            to the right----->
-            <br>
-            pink, purple
-        </div>
-        <div id="container2">
-            <----to the left <br>
-                green, rgba(0, 0, 255, 0.048)
-        </div>
-
-        <div id="container3">
-            top right corner to bottom left
-            <br>
-            grey, orange
-        </div>
-        <div id="container4">
-            top left corner to bottom right
-            <br>
-            red, yellow, pink, green, violet, purple, blue, gold
-        </div>
-
-        <img usemap="#food" class="foodImg" src="media/food1.jpg" alt="Picture of some food.">
-
-        <map name="food">
-            <area shape="circle" coords="290,290,95"
-                href="https://www.google.com/search?q=bread&rlz=1C1CHBF_en-GBGB905GB905&sxsrf=ALeKk01e1VSI0uDBaBBNfpupaQrZw_D9Pw:1613056456507&source=lnms&tbm=isch&sa=X&ved=2ahUKEwiywt7Ij-LuAhUKXMAKHYHBDsUQ_AUoAXoECAQQAw"
-                alt="bread" target="_blank">
-            <area shape="rect" coords="485,15,300,200"
-                href="https://www.google.com/search?q=drinks&rlz=1C1CHBF_en-GBGB905GB905&sxsrf=ALeKk02zNAs2Fle8Sts8uv-LRjM1v3LGpA:1613056428239&source=lnms&tbm=isch&sa=X&ved=2ahUKEwi3pKG7j-LuAhULHcAKHaPpCK4Q_AUoAXoECAQQAw&biw=1366&bih=667"
-                alt="drink" target="_blank">
-            <area shape="rect" coords="635,155,500,410"
-                href="https://www.google.com/search?q=cutlery&rlz=1C1CHBF_en-GBGB905GB905&sxsrf=ALeKk017ESlIKl0tnTOjhEIoD4Oyvi2UgQ:1613055551085&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjt6P-YjOLuAhWVi1wKHfwUBXwQ_AUoAnoECBAQBA&biw=1301&bih=657"
-                alt="cutlery" target="_blank">
-        </map>
-
-        <div class="imgLink1">
-            <figcaption>This is a picture of a beach in Tanzania.</figcaption>
-            <a href="https://www.google.com/search?q=tanzania+beaches&rlz=1C1CHBF_en-GBGB905GB905&sxsrf=ALeKk01K3ajXKKiywzieU5NWdQ31fgMgVQ:1612991424251&source=lnms&tbm=isch&sa=X&ved=2ahUKEwic0fimneDuAhXSTxUIHe-6AZIQ_AUoAXoECBAQAw&biw=859&bih=657#imgrc=662-tzMFTFUrSM"
-                target="_blank">
-                <figure class="imgLink">
-                    <img class="img"
-                        src="https://cms.hostelworld.com/hwblog/wp-content/uploads/sites/2/2019/07/Tanzania-beaches-med-j-unsplash.jpg"
-                        alt="Image of a beach in Tanzania." title="This is a picture of a beach in Tanzania.">
-                </figure>
-            </a>
-        </div>
-
-        <div class="imgLink2">
-            <figcaption>This is a picture of the Twitter bird.</figcaption>
-            <a href="https://twitter.com/home?lang=en-gb" target="_blank">
-                <figure class="imgLink">
-                    <img class="img" src="https://help.twitter.com/content/dam/help-twitter/brand/logo.png"
-                        alt="Image of bird for Twitter." title="This is the Twitter bird.">
-                </figure>
-            </a>
-        </div>
-
-
-        <nav id="navContainer">
-            This is the navigation.
-        </nav>
-
-        <hr>
-
-        <header>
-            This is a header.
-        </header>
-
-        <hr>
-
-        <h1>Heading Level 1</h1>
-        <h2>Heading Level 2</h2>
-        <h3>Heading Level 3</h3>
-        <h4>Heading Level 4</h4>
-        <h5>Heading Level 5</h5>
-        <h6>Heading Level 6</h6>
-
-        <hr>
-
-        <p>
-            This is an example of a paragraph using the paragraph tag.
-            <br>
-            It&#39;s good to use standardized methods to maintain
-            a readable structure of your content.
-        </p>
-
-        <p>
-            Just some
-            <strong>random</strong>
-            text for
-            <b>this</b>
-            <i>paragraph</i>
-            , YAY!
-        </p>
-
-        <p>
-            <em>Another</em>
-            paragraph
-            <cite>sentence</cite>
-            . Hello!
-        </p>
-
-        <p>
-            <mark>Time for some highlighted text yes!</mark>
-        </p>
-
-        <p>The most important rooms for a studio apartment!</p>
-
-        <p>Time for a Description List!</p>
-
-        <p>What's in each burger?</p>
-
-        <p>
-            this is a paragraph... again and it has an error!
-        </p>
-
-        <p>Practicing using special characters like: </p>
-
-        <p>fixed it :P</p>
-
-        <p>
-            Take That once said:
-        </p>
-
-        <p>Shopping List</p>
-
-        <hr>
-
-        <blockquote>
-            &quot;Never forget where you're coming from!&quot;
-        </blockquote>
-
-        <hr>
-
-        <ol>
-            <li>Bedroom</li>
-            <li>Kitchen</li>
-            <li>Bathroom</li>
-        </ol>
-
-        <hr>
-
-        <main>
-            <ul>
-                <li>This is where the main tags are.</li>
-                <li>
-                    <small> They </small>
-                    contain the main content of the webpage.
-                </li>
-            </ul>
-        </main>
-
-        <ul>
-            <li>
-                <mark>&nbsp; &nbsp; &nbsp; &nbsp; </mark>
-            </li>
-            <li>
-                and (&amp;)
-            </li>
-            <li>
-                <mark>&amp;</mark>
-            </li>
-            <li>
-                <mark>&copy;</mark>
-            </li>
-        </ul>
-
-        <ul>
-            <li>Apples</li>
-            <li>Cakes</li>
-            <li>Water Bottles</li>
-        </ul>
-
-        <hr>
-
-        <dl>
-            <dt>Big Mac</dt>
-            <dd>Cheese</dd>
-            <dd>Beef</dd>
-
-            <dt>Whopper</dt>
-            <dd>Lettuce</dd>
-            <dd>Tomato</dd>
-
-            <dt>Saver's</dt>
-            <dd>Cheap bread</dd>
-            <dd>Pickles</dd>
-        </dl>
-
-        <hr>
-
-        <section>
-            <a href="https://www.somemadeuplink@thisisnotreal.com/">This is a hyperlink. Click it if you want
-                :P</a>
-        </section>
-
-        <hr>
-
-        <mark>&nbsp; ERROR!!!!!!! </mark>
-
-        <hr>
 
         <div>
-            <p>
-                <span class="thisOne">Only this part will have the opacity added to it,</span>
-                while this part will not. It will just look like ordinary text.
-            </p>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <details>
+                <summary>Click to Reveal the text!</summary>
+                <p>This is the hidden text that you have now revealed!</p>
+            </details>
+
+            <video id="vid" height="150" controls poster="media/food1.jpg">
+                <source src="media/beachVid.mp4" type="video/mp4"> -->
+        <!-- you should the same video from 2 different sources however -->
+        <!-- Your browser does not support video elements. Oh well!
+            </video>
+
+            <audio id="sound" controls autoplay muted>
+                <source src="media/gameover.wav" type="audio/mp4"> -->
+        <!-- you should the same audio from 2 different sources however -->
+        <!-- Your browser does not support audio elements. Oh well!
+            </audio>
         </div>
 
-        <footer>
-            This is the footer.
-        </footer>
+        <div>
+            <table>
+                <caption>Food And Drink!</caption>
+                <tr>
+                    <th colspan="5" rowspan="2">Fruit</th>
+                    <th colspan="3">Veg</th>
+                    <th>Drinks</th>
+                </tr>
 
+                <tr>
+                    <td>Apple</td>
+                    <td>Sweetcorn</td>
+                    <td rowspan="5">Water</td>
+                </tr>
+
+                <tr>
+                    <td>Pear</td>
+                    <td>Kale</td>
+                    <td>Juice</td>
+                </tr>
+
+                <tr>
+                    <td>Lemon</td>
+                    <td rowspan="3">Cabbage</td>
+                    <td>Wine</td>
+                </tr>
+
+                <tr>
+                    <td>Kiwi</td>
+                    <td>Carrot</td>
+                    <td colspan="5">
+                        <dl>
+                            <dt>Fizzy Pop</dt>
+                            <dd>Fanta</dd>
+                            <dd>Sprite</dd>
+                            <dd>Cola</dd>
+                        </dl>
+                    </td>
+                </tr>
+            </table>
+        </div> -->
+
+        <!-- <div class="flex_or_grid_container container">
+            <div id="one" class="flex_or_grid_items">1</div>
+            <div id="two" class="flex_or_grid_items">2</div>
+            <div id="three" class="flex_or_grid_items">3</div>
+            <div class="flex_or_grid_items">4</div>
+            <div class="flex_or_grid_items">5</div>
+            <div class="six flex_or_grid_items">6</div>
+            <div class="flex_or_grid_items">7</div>
+            <div class="eight flex_or_grid_items">8</div>
+            <div class="flex_or_grid_items">9</div>
+            <div class="ten flex_or_grid_items">10</div>
+            <div class="flex_or_grid_items">11</div>
+            <div class="tweleve flex_or_grid_items">12</div>
+            <div class="flex_or_grid_items">13</div>
+            <div class="fourteen flex_or_grid_items">14</div>
+            <div class="flex_or_grid_items">15</div>
+            <div class="sixteen flex_or_grid_items">16</div>
+            <div class="flex_or_grid_items">17</div>
+            <div class="flex_or_grid_items">18</div>
+            <div class="flex_or_grid_items">19</div>
+            <div class="twenty flex_or_grid_items">20</div>
+        </div>
+
+        <div>
+            <picture>
+                <source media="(min-width:1366px)" srcset="media/food1.jpg">
+                <source media="(min-width:1200px)" srcset="media/food2.jpg">
+                <source media="(min-width:992px)" srcset="media/food3.jpg">
+                <source media="(min-width:768px)" srcset="media/food4.jpg">
+                <source media="(min-width:576px)" srcset="media/food5.jpg">
+                <source media="(min-width:320px)" srcset="media/food6.jpg">
+                <img src="media/food7.jpg" alt="food" width="500em">
+            </picture>
+        </div>
+
+        <div>
+
+            <nav>
+                Home | Shop | Contact
+            </nav>
+
+            <aside>
+                This is the aside.
+            </aside>
+
+            <main>
+                This is the main.
+            </main>
+
+            <footer>
+                Copyright &copy;
+            </footer>
+
+        </div>
+
+        <div>
+
+            <div id="wrapper">
+                <header>
+                    <h1>Layout Example</h1>
+                </header>
+                <nav class="floatingNav">
+                    <a href="index.html">Home</a>
+                    <a href="#">Page 1</a>
+                    <a href="#">Page 2</a>
+                    <a href="#">Page 3</a>
+                    <a href="#">Page 4</a>
+                    <a href="#">Page 5</a>
+                    <a href="#">Page 6</a>
+                    <a href="#">Page 7</a>
+                    <a href="#">Page 8</a>
+                    <a href="#">Page 9</a>
+                    <a href="#">Page 10</a>
+                </nav>
+                <main class="main">
+                    <h2>Page Heading</h2>
+                    <p>This is a sentence. This is a sentence. This is a sentence. This is a sentence. This is a
+                        sentence.
+                        This is a sentence. This is a sentence. This is a sentence. This is a sentence. This is a
+                        sentence.
+                        This is a sentence. This is a sentence. This is a sentence. This is a sentence. This is a
+                        sentence.
+                        This is a sentence. This is a sentence. This is a sentence. This is a sentence. This is a
+                        sentence.
+                        This is a sentence. This is a sentence. This is a sentence. This is a sentence.
+                        This is a sentence. This is a sentence. This is a sentence. This is a sentence. This is a
+                        sentence.
+                        This is a sentence. This is a sentence. This is a sentence. This is a sentence. This is a
+                        sentence.
+                        This is a sentence. This is a sentence. This is a sentence. This is a sentence. This is a
+                        sentence.
+                        This is a sentence. This is a sentence. This is a sentence. This is a sentence. This is a
+                        sentence.
+                        This is a sentence. This is a sentence. This is a sentence. This is a sentence.
+                    </p>
+                </main>
+                <footer>Copyright © 2018</footer>
+            </div>
+
+            <h2>My Skills! </h2>
+
+            <div class="container">
+                default (top to down)
+                <br>
+                red, yellow
+                <br>
+                <br>
+
+                <label for="skills">HTML5</label>
+                <meter id="skills" value="0.95">This doesn't show???</meter>
+
+                <br>
+
+                <label for="skills">CCS3</label>
+                <meter id="skills" value="9" min="0" max="10">This doesn't show???</meter>
+
+                <br>
+
+                <label for="skills">JavaScript ES6</label>
+                <progress id="skills" value="5" min="0" max="10">This doesn't show???</progress>
+
+                <br>
+
+                <label for="skills">Python</label>
+                <progress id="skills" value="3" min="0" max="10">This doesn't show???</progress>
+
+                <br>
+            </div>
+
+            <div id="container1"> -->
+        <!-- to the right &gt;
+                <br>
+                pink, purple
+            </div>
+            <div id="container2">
+                &lt; to the left <br>
+                    green, rgba(0, 0, 255, 0.048)
+            </div>
+
+            <div id="container3">
+                top right corner to bottom left
+                <br>
+                grey, orange
+            </div>
+            <div id="container4">
+                top left corner to bottom right
+                <br>
+                red, yellow, pink, green, violet, purple, blue, gold
+            </div>
+
+            <img usemap="#food" class="foodImg" src="media/food1.jpg" alt="Picture of some food.">
+
+            <map name="food">
+                <area shape="circle" coords="290,290,95"
+                    href="https://www.google.com/search?q=bread&rlz=1C1CHBF_en-GBGB905GB905&sxsrf=ALeKk01e1VSI0uDBaBBNfpupaQrZw_D9Pw:1613056456507&source=lnms&tbm=isch&sa=X&ved=2ahUKEwiywt7Ij-LuAhUKXMAKHYHBDsUQ_AUoAXoECAQQAw"
+                    alt="bread" target="_blank">
+                <area shape="rect" coords="485,15,300,200"
+                    href="https://www.google.com/search?q=drinks&rlz=1C1CHBF_en-GBGB905GB905&sxsrf=ALeKk02zNAs2Fle8Sts8uv-LRjM1v3LGpA:1613056428239&source=lnms&tbm=isch&sa=X&ved=2ahUKEwi3pKG7j-LuAhULHcAKHaPpCK4Q_AUoAXoECAQQAw&biw=1366&bih=667"
+                    alt="drink" target="_blank">
+                <area shape="rect" coords="635,155,500,410"
+                    href="https://www.google.com/search?q=cutlery&rlz=1C1CHBF_en-GBGB905GB905&sxsrf=ALeKk017ESlIKl0tnTOjhEIoD4Oyvi2UgQ:1613055551085&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjt6P-YjOLuAhWVi1wKHfwUBXwQ_AUoAnoECBAQBA&biw=1301&bih=657"
+                    alt="cutlery" target="_blank">
+            </map>
+
+            <div class="imgLink1">
+                <figcaption>This is a picture of a beach in Tanzania.</figcaption>
+                <a href="https://www.google.com/search?q=tanzania+beaches&rlz=1C1CHBF_en-GBGB905GB905&sxsrf=ALeKk01K3ajXKKiywzieU5NWdQ31fgMgVQ:1612991424251&source=lnms&tbm=isch&sa=X&ved=2ahUKEwic0fimneDuAhXSTxUIHe-6AZIQ_AUoAXoECBAQAw&biw=859&bih=657#imgrc=662-tzMFTFUrSM"
+                    target="_blank">
+                    <figure class="imgLink">
+                        <img class="img"
+                            src="https://cms.hostelworld.com/hwblog/wp-content/uploads/sites/2/2019/07/Tanzania-beaches-med-j-unsplash.jpg"
+                            alt="Image of a beach in Tanzania." title="This is a picture of a beach in Tanzania.">
+                    </figure>
+                </a>
+            </div>
+
+            <div class="imgLink2">
+                <figcaption>This is a picture of the Twitter bird.</figcaption>
+                <a href="https://twitter.com/home?lang=en-gb" target="_blank">
+                    <figure class="imgLink">
+                        <img class="img" src="https://help.twitter.com/content/dam/help-twitter/brand/logo.png"
+                            alt="Image of bird for Twitter." title="This is the Twitter bird.">
+                    </figure>
+                </a>
+            </div>
+
+
+            <nav id="navContainer">
+                This is the navigation.
+            </nav>
+
+            <hr>
+
+            <header>
+                This is a header.
+            </header>
+
+            <hr>
+
+            <h1>Heading Level 1</h1>
+            <h2>Heading Level 2</h2>
+            <h3>Heading Level 3</h3>
+            <h4>Heading Level 4</h4>
+            <h5>Heading Level 5</h5>
+            <h6>Heading Level 6</h6>
+
+            <hr>
+
+            <p>
+                This is an example of a paragraph using the paragraph tag.
+                <br>
+                It&#39;s good to use standardized methods to maintain
+                a readable structure of your content.
+            </p>
+
+            <p>
+                Just some
+                <strong>random</strong>
+                text for
+                <b>this</b>
+                <i>paragraph</i>
+                , YAY!
+            </p>
+
+            <p>
+                <em>Another</em>
+                paragraph
+                <cite>sentence</cite>
+                . Hello!
+            </p>
+
+            <p>
+                <mark>Time for some highlighted text yes!</mark>
+            </p>
+
+            <p>The most important rooms for a studio apartment!</p>
+
+            <p>Time for a Description List!</p>
+
+            <p>What's in each burger?</p>
+
+            <p>
+                this is a paragraph... again and it has an error!
+            </p>
+
+            <p>Practicing using special characters like: </p>
+
+            <p>fixed it :P</p>
+
+            <p>
+                Take That once said:
+            </p>
+
+            <p>Shopping List</p>
+
+            <hr>
+
+            <blockquote>
+                &quot;Never forget where you're coming from!&quot;
+            </blockquote>
+
+            <hr>
+
+            <ol>
+                <li>Bedroom</li>
+                <li>Kitchen</li>
+                <li>Bathroom</li>
+            </ol>
+
+            <hr>
+
+            <main>
+                <ul>
+                    <li>This is where the main tags are.</li>
+                    <li>
+                        <small> They </small>
+                        contain the main content of the webpage.
+                    </li>
+                </ul>
+            </main>
+
+            <ul>
+                <li>
+                    <mark>&nbsp; &nbsp; &nbsp; &nbsp; </mark>
+                </li>
+                <li>
+                    and (&amp;)
+                </li>
+                <li>
+                    <mark>&amp;</mark>
+                </li>
+                <li>
+                    <mark>&copy;</mark>
+                </li>
+            </ul>
+
+            <ul>
+                <li>Apples</li>
+                <li>Cakes</li>
+                <li>Water Bottles</li>
+            </ul>
+
+            <hr>
+
+            <dl>
+                <dt>Big Mac</dt>
+                <dd>Cheese</dd>
+                <dd>Beef</dd>
+
+                <dt>Whopper</dt>
+                <dd>Lettuce</dd>
+                <dd>Tomato</dd>
+
+                <dt>Saver's</dt>
+                <dd>Cheap bread</dd>
+                <dd>Pickles</dd>
+            </dl>
+
+            <hr>
+
+            <section>
+                <a href="https://www.somemadeuplink@thisisnotreal.com/">This is a hyperlink. Click it if you want
+                    :P</a>
+            </section>
+
+            <hr>
+
+            <mark>&nbsp; ERROR!!!!!!! </mark>
+
+            <hr>
+
+            <div>
+                <p>
+                    <span class="thisOne">Only this part will have the opacity added to it,</span>
+                    while this part will not. It will just look like ordinary text.
+                </p>
+            </div>
+
+            <footer>
+                This is the footer.
+            </footer>
+
+        </div>
+
+        <div>
+            <h1>The Canvas Element</h1>
+
+            <canvas id="myCanvas" width="400" height="175">
+                My Canvas
+            </canvas>
+
+            <h2>Using Javascript</h2>
+            <p onclick="alertMessage()" id="pointer">click this for an alert message via embedded Javascript</p>
+        </div>
+
+        <div> -->
+        <!-- The <hgroup> is not supported in HTML5 -->
+        <!-- <hgroup>
+                <h1>This is the h1 element.</h1>
+                <h2>This is the h2 element.</h2>
+                <h3>This is the h3 element.</h3>
+            </hgroup> -->
+        <!-- The <hgroup> is not supported in HTML5 -->
+
+        <!-- Only works in Firefox! So don't bother! -->
+        <!-- <menu>
+                <li>
+                    <button type="menu">This is the menu button</button>
+                </li>
+            </menu> -->
+        <!-- Only works in Firefox! So don't bother! -->
+        <!-- </div> -->
     </div>
 
-    <div>
-        <h1>The Canvas Element</h1>
+    <!-- <script>
+        function checkDate(strDate, form) {
+            // regular expression to match required date format
+            re = /^(\d{1,2})\/(\d{1,2})\/(\d{4})$/;
 
-        <canvas id="myCanvas" width="400" height="175">
-            My Canvas
-        </canvas>
+            if (form.dob.value != "" && form.dob.value.match(re)) {
+                alert("invalid date format" + form.dob.value);
+                form.dob.focus();
+                return false;
+            }
+            // regular expression to match the required format
+            re = /^\d{1,2}:\d{2}([ap]m)?$/;
 
-        <h2>Using Javascript</h2>
-        <p onclick="alertMessage()" id="pointer">click this for an alert message via embedded Javascript</p>
-    </div>
+            if (strDate != "") {
+                regs = strDate;
+                // 01234567
+                // 12/13/70
+                // store the month
+                m_regs = regs.substring(0, 2);
+                // store the day
+                d_regs = regs.substring(3, 5);
+                // store the year
+                y_regs = regs.substring(6);
 
+                // store the day, month and year in separate alerts to view results
+                // alert(m_regs);
+                // alert(d_regs);
+                // alert(y_regs);
+
+                // day value is between 1 and 31
+                if (d_regs < 1 || d_regs > 31) {
+                    alert("invalid value for day: " + d_regs);
+                    form.dob.focus();
+                    return false;
+                }
+                // checks value for month
+                if (m_regs < 1 || m_regs > 12) {
+                    alert("invalid value for month: " + m_regs);
+                    form.dob.focus();
+                    return false;
+                }
+                // check value for year
+                if (y_regs > 20) {
+                    alert("invalid value for year: " + y_regs);
+                    form.dob.focus();
+                    return false;
+                }
+            }
+
+            if (form.startTime.value != "" && !form.startTime.value.match(re)) {
+                alert("invalid time format: " + form.startTime.value);
+                form.startTime.focus();
+                return false;
+            }
+            alert("all is valid");
+            return true;
+        }
+
+        function checkForm(form) {
+            return checkDate(form.dob.value.toString(), form);
+        }
+    </script> -->
+    <!-- <script>
+        function checkForm(form) {
+            // regular expression to match required date format
+            re = /^(\d{1,2})\/(\d{1,2})\/(\d{4})$/;
+
+            if (form.dob.value != "" && form.dob.value.match(re)) {
+                alert("invalid date format" + form.dob.value);
+                form.dob.focus();
+                return false;
+            }
+            // regular expression to match the required format
+            re = /^\d{1,2}:\d{2}([ap]m)?$/;
+
+            if (form.dob.value != "") {
+                regs = form.dob.value.toString();
+                // 01234567
+                // 12/13/70
+                // store the month
+                m_regs = regs.substring(0, 2);
+                // store the day
+                d_regs = regs.substring(3, 5);
+                // store the year
+                y_regs = regs.substring(6);
+
+                // store the day, month and year in separate alerts to view results
+                // alert(m_regs);
+                // alert(d_regs);
+                // alert(y_regs);
+
+                // day value is between 1 and 31
+                if (d_regs < 1 || d_regs > 31) {
+                    alert("invalid value for day: " + d_regs);
+                    form.dob.focus();
+                    return false;
+                }
+                // checks value for month
+                if (m_regs < 1 || m_regs > 12) {
+                    alert("invalid value for month: " + m_regs);
+                    form.dob.focus();
+                    return false;
+                }
+                // check value for year
+                if (y_regs > 20) {
+                    alert("invalid value for year: " + y_regs);
+                    form.dob.focus();
+                    return false;
+                }
+            }
+
+            if (form.startTime.value != "" && !form.startTime.value.match(re)) {
+                alert("invalid time format: " + form.startTime.value);
+                form.startTime.focus();
+                return false;
+            }
+            alert("all is valid");
+            return true;
+        }
+    </script> -->
+    <!-- <script>
+        // document.getElementById("terms").setCustomValidity("please indicate that you accept the t's and c's!");
+        function checkForm(form) {
+            document.addEventListener("DOMContentLoaded", function () {
+
+                let myForm = document.getElementById("data");
+                let checkForm = function (e) {
+                    if (!this.terms.checked) {
+                        alert("please indicate that you have accepted the t's and c's!");
+                        this.terms.focus();
+                        e.preventDefault(); // same as returning false
+                        return;
+                    }
+                };
+                // attach the form to the submit handler
+                myForm.addEventListener("submit", checkForm, true);
+
+                let myCheckBox = document.getElementById("terms");
+                let myCheckBoxMessage = "please indicate you have accepted the t's and c's!";
+
+                // set the starting error message
+                myCheckBox.setCustomValidity(myCheckBoxMessage);
+
+                // attach checkbox handler to toggle error message
+                myCheckBox.addEventListener("change", function () {
+                    this.setCustomValidity(this.validity.valueMissing ? myCheckBoxMessage : "");
+                }, false);
+            }, false);
+        }
+    </script> -->
+    <!-- <script>
+        function checkForm(form) {
+            if (!form.box.checked) {
+                alert("please indicate you accept the t's and c's!");
+                form.box.focus();
+                return false;
+            }
+            alert("you accepted the t's and c's!");
+            return true;
+        }
+    </script> -->
+    <!-- <script>
+        function checkPassword(str) {
+            let re = /^(?=.*\d) (?=.*[a-z]) (?=.*[A-Z]).{6,}$/;
+            return re.test(str);
+        }
+
+        function checkForm(form) {
+            if (form.username.value === "") {
+                alert("username cannot be blank!");
+                form.username.focus();
+                return false;
+            }
+            re = /^\w+$/;
+            if (!re.test(form.username.value)) {
+                alert("username must contain letters, numbers and underscores only!")
+                form.username.focus();
+                return false;
+            }
+            if (form.password.value !== "" && form.password.value === form.password2.value) {
+                if (!checkPassword(form.password.value)) {
+                    alert("password you entered was not valid!");
+                    form.password.focus();
+                } else {
+                    alert("confirm you have entered and confirmed the password!");
+                    form.password.focus();
+                    return false;
+                }
+                return true;
+            }
+        }
+    </script> -->
     <script src="scripts.js"></script>
     <script type="text/javascript">
-        function alertMessage() {
-            alert("This is an alert message!");
-        };
+        // function checkForm(form) {
+        //     if (form.fname.value === "") {
+        //         alert("first name cannot be blank");
+        //         form.fname.focus();
+        //         return false;
+        //     }
+        //     re = /^\D(\d{2,}|\D+)\d*$/i;
+        //     if (!re.test(form.fname.value)) {
+        //         alert("First name must: 1) Start with a letter \
+        //         2) End with 2 or more numbers OR \
+        //         2) Have 1 or more letters next \
+        //         3) And end with 0 or more numbers \
+        //         4) But can be case insensitive!");
+        //         form.fname.focus();
+        //         return false;
+        //     }
+        //     if (form.password.value !== "" && form.password.value === form.password2.value) {
+        //         if (form.password.value.length < 6) {
+        //             alert("password must be at least 6 characters long!")
+        //             form.password.focus();
+        //             return false;
+        //         }
+        //         if (form.password.value === form.fname.value) {
+        //             alert("password cannot be the same as the first name!");
+        //             form.password.focus();
+        //             return false;
+        //         }
+        //         re = /[0-9]/;
+        //         if (!re.test(form.password.value)) {
+        //             alert("password must contain number between 0 and 9");
+        //             form.password.focus();
+        //             return false;
+        //         }
+        //         re = /[a-z]/;
+        //         if (!re.test(form.password.value)) {
+        //             alert("password must contain at least 1 lower case letter");
+        //             form.password.focus();
+        //             return false;
+        //         }
+        //         re = /[A-Z]/;
+        //         if (!re.test(form.password.value)) {
+        //             alert("password must contain at least 1 upper case letter");
+        //             form.password.focus();
+        //             return false;
+        //         }
+        //     } else {
+        //         alert("please check you have entered and confirmed your password!");
+        //         form.password.focus();
+        //         return false;
+        //     } alert("you have entered a valid password!");
+        //     return true;
+        // }
+        // function alertMessage() {
+        //     alert("This is an alert message!");
+        // };
     </script>
-
 </body>
 
 </html>
