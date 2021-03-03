@@ -93,7 +93,7 @@ pet_first_part = "I would like to buy a "
 pet_sentence = pet_first_part + pet.rstrip() + "."
 print(pet_sentence)
 
-making_ten = 5 * 2 
+making_ten = 5 * 2
 equal_to_ten = 10
 for_boolean_checking = making_ten == equal_to_ten
 print(for_boolean_checking, bool)
@@ -163,7 +163,7 @@ name = "dave"
 age = "20"
 print(f"His name is {name.title()} and he is {age} years old.")
 
-one1,two2,three3 = 1,2,3
+one1, two2, three3 = 1, 2, 3
 print(one1)
 print(two2)
 print(three3)
@@ -229,7 +229,7 @@ list_of_food_items = ["eggs", "bacon", "pizza", "pie"]
 # 2.
 print(list_of_food_items[1])
 print(list_of_food_items[3])
- 
+
 # 3.
 print(list_of_food_items[2], type(list_of_food_items[2]))
 
@@ -292,22 +292,26 @@ fruits.insert(3, "watercress")
 print(fruits)
 
 # orders items in list based on alphabet
-body_parts = ["hands", "head", "neck", "hip", "toe", "eyes", "nails", "knee", "arms"]
+body_parts = ["hands", "head", "neck", "hip",
+              "toe", "eyes", "nails", "knee", "arms"]
 body_parts.sort()
 print(body_parts)
 
 # reverses items in list based on alphabet
-body_parts = ["hands", "head", "neck", "hip", "toe", "eyes", "nails", "knee", "arms"]
+body_parts = ["hands", "head", "neck", "hip",
+              "toe", "eyes", "nails", "knee", "arms"]
 body_parts.sort(reverse=True)
 print(body_parts)
 
 # reverses items in list based on how it's original displayed
-body_parts = ["hands", "head", "neck", "hip", "toe", "eyes", "nails", "knee", "arms"]
+body_parts = ["hands", "head", "neck", "hip",
+              "toe", "eyes", "nails", "knee", "arms"]
 body_parts.reverse()
 print(body_parts)
 
-# think of sorted() as a preview that shows the changed list but the OG list itself has not been changed like that 
-body_parts = ["hands", "head", "neck", "hip", "toe", "eyes", "nails", "knee", "arms"]
+# think of sorted() as a preview that shows the changed list but the OG list itself has not been changed like that
+body_parts = ["hands", "head", "neck", "hip",
+              "toe", "eyes", "nails", "knee", "arms"]
 print(body_parts)
 print(sorted(body_parts))
 print(body_parts)
@@ -330,6 +334,427 @@ furniture = ["chair", "sink", "table", "door"]
 furniture.sort(reverse=True)
 print(furniture)
 
+nums = [1, 2, 3, 4, 5, 6]
+print(nums[2:5])
+
+vehicles = ["car", "truck", "bike", "train", "plane", "limo"]
+print(vehicles[2:5])
+
+players = ["bob", "steve", "michael", "tom", "eli"]
+print("These are the players in the team: ")
+for player in players[0:3]:
+    print(player.title())
+
+vehicles = ["car", "truck", "bike", "train", "plane", "limo"]
+print("My favourite means of transport are: ")
+for vehicle in vehicles[1:5]:
+    print(vehicle)
+
+cities = ["New York", "Leeds", "Manchester", "Bristol", "Liverpool", "Kigali"]
+print("Print out the British cities only: ")
+for city in cities[1:5]:
+    print(city)
+
+number_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+print(number_list[1:10:2])
+
+tv_shows = ["arthur", "biker grove", "hey arnold",
+            "big cook little cook", "powerpuff girls"]
+print("These are cartoons: ")
+print(tv_shows[0:5:2])
+
+print("These are NOT cartoons: ")
+for non_cartoon in tv_shows[1:4:2]:
+    print(non_cartoon)
+
+clothes = ["hat", "scarf", "shoes", "socks",
+           "belt", "shirt", "sunglasses", "shorts"]
+print(clothes[2:8])
+for clothing in clothes[2:8]:
+    print(clothing)
+
+clothes = ["hat", "scarf", "shoes", "socks",
+           "belt", "shirt", "sunglasses", "shorts"]
+print(clothes[1:8:2])
+
+get_odd_nums_only = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+print(len(get_odd_nums_only))
+print(get_odd_nums_only[0:len(get_odd_nums_only):3])
+for odd_num in get_odd_nums_only[0:9:3]:
+    print(odd_num)
+
+# 1.
+one_to_eight_nums = [1, 2, 3, 4, 5, 6, 7, 8]
+print(one_to_eight_nums[2:5])
+for single_num in one_to_eight_nums[2:5]:
+    print(single_num)
+
+# 2.
+get_odd_nums_only = [1, 2, 3, 4, 5, 6, 7, 8]
+print(get_odd_nums_only[0:8:2])
+for odd_num in get_odd_nums_only[0:8:2]:
+    print(odd_num)
+
+x = 24 + 88
+print(x)
+
+x = 4
+y = 8
+z = x + y
+print(z)
+
+x = 405
+y = 89
+z = x - y
+print(z)
+
+x = 5
+y = 10
+z = x - y
+print(z)
+
+x = 405 / 5
+print(x)
+print(int(x))
+
+x = 3 * 11
+print(x)
+
+x = 2
+y = 5
+z = (x * y) + (y / x)
+print(z)
+
+print(3 ** 2)
+
+x = 2
+y = 5
+z = x ** y
+print(z)
+
+x = 2 ** 8
+print(x)
+
+a = 1
+a += 5
+print(a)
+
+a = 10
+a -= 6
+print(a)
+
+a = 3
+a *= 4
+print(a)
+
+a = 200
+a /= 5
+print(a)
+print(int(a))
+
+a = 2
+a **= 3
+print(a)
+
+b = 3
+c = 4
+print(b == c)
+
+b = 30
+c = 30
+print(b == c)
+
+b = "30"
+c = 30
+print(b == c)
+
+b = 67
+c = 67
+print(b != c)
+
+b = 89
+c = 5
+print(b != c)
+
+b = 100
+c = 60
+print(b > c)
+
+b = 2
+c = 78
+print(b > c)
+
+b = 1
+c = 55
+print(b < c)
+
+b = 66
+c = 3
+print(b < c)
+
+b = 66.98
+c = 66.92
+print(b < c)
+
+d = 66.98
+e = 66.92
+print(d <= e)
+
+d = 66.98
+e = 66.98
+print(d <= e)
+
+d = 5
+e = 10
+print(d >= e)
+
+d = 500
+e = 10
+print(d >= e)
+
+d = 3.0
+e = 3
+print(d >= e)
+
+f = 4
+print(f > 3 and f > 9)
+
+f = 10
+print(f > 3 and f > 9)
+
+f = 20
+print(f > 50 and f > 30)
+
+f = 5
+print(f < 50 and f > 3)
+
+f = 58
+print(f > 10 and f < 4)
+
+f = 7
+print(f > 2 or f > 8)
+
+f = 5
+print(f < 2 or f > 8)
+
+f = 11
+print(f < 89 or f > 90)
+
+f = 11
+print(f > 89 or f < 90)
+
+f = 11
+print(f > 89 or f > 90)
+
+f = 11
+print(f < 89 or f < 90)
+
+f = 10
+print(not(f > 80 and f > 90))
+
+g = 5
+h = 3
+i = g
+j = h
+
+print("g is h: " + str(g is h))
+print("h is g: " + str(h is g))
+
+print("g is i: " + str(g is i))
+print("i is g: " + str(i is g))
+
+print("h is i: " + str(h is i))
+print("h is g: " + str(h is g))
+
+print("j is h: " + str(j is h))
+print("h is j: " + str(h is j))
+
+h = 99
+print(j)
+print("j is h: " + str(j is h))
+
+k = 1
+l = 2
+m = 3
+n = k
+o = l
+
+print(o is not k)
+print(o is not l)
+print(n is not l)
+print(n is not k)
+
+print(l is not o)
+print(l is not m)
+print(l is not k)
+
+print(k is not n)
+print(k is not m)
+print(k is not l)
+
+body_parts = ["hands", "head", "neck", "hip",
+              "toe", "eyes", "nails", "knee", "arms"]
+
+print("teeth" in body_parts)
+print("arms" in body_parts)
+print("feet" in body_parts)
+print("hands" in body_parts)
+
+fruits = ["apple", "pear", "lemon", "peach", "passionfruit"]
+
+print("passionfruit" not in fruits)
+print("coconut" not in fruits)
+print("apple" not in fruits)
+print("fish" not in fruits)
+print("watermelon" not in fruits)
+
+a = 24
+b = 60
+print(a & b)
+print(bin(a))
+print(bin(b))
+
+x = 223
+y = 111
+print(x & y)
+print(bin(x))
+print(bin(y))
+
+a = 24
+b = 60
+print(a | b)
+print(bin(a))
+print(bin(b))
+
+x = 223
+y = 111
+print(x | y)
+print(bin(x))
+print(bin(y))
+
+a = 24
+b = 60
+print(a ^ b)
+print(bin(a))
+print(bin(b))
+
+x = 223
+y = 111
+print(x ^ y)
+print(bin(x))
+print(bin(y))
+
+print(10 % 2)
+print(11 % 2)
+
+a = 10
+b = 2
+c = a // b
+print(c)
+
+# 1.
+a = 7 + (4 * 3) - 9 / 5 + 2 ** 2
+print(a)
 
 
+a = 2
+b = 4
+c = 3
 
+print(a * a + c)
+print(a + b * c)
+print(a * b + c)
+print(a / b * c)
+print(a - b + c)
+
+x = 50
+y = 400
+if x > y:
+    print("x is bigger than y")
+else:
+    print("x is smaller than y")
+
+z = 1
+a = 10
+
+if z > a:
+    print("z is bigger than a")
+elif z == a:
+    print("z and a are the SAME")
+else:
+    print("z is smaller than a")
+
+z = 1000
+a = 1000
+
+if z > a:
+    print("z is bigger than a")
+elif z < a:
+    print("z is smaller than a")
+else:
+    print("z and a are the SAME")
+
+smoothie_ingredients = ["banana", "nuts", "ice-cream"]
+
+if "banana" in smoothie_ingredients:
+    print("you added banana to your smoothie")
+
+if "nuts" not in smoothie_ingredients:
+    print("DO NOT added nuts to the smoothie ")
+
+if "nuts" in smoothie_ingredients:
+    print("you added nuts to your smoothie")
+
+if "cake pieces" in smoothie_ingredients:
+    print("added cake pieces to your smoothie")
+
+if "ice-cream" in smoothie_ingredients:
+    print("you added ice-cream to your smoothie")
+
+print("enjoy your smoothie")
+
+# 1.
+temp = 11
+
+if temp >= 75:
+    print("today is a hot day")
+elif temp <= 74 and temp > 11:
+    print("today is a warm day")
+else:
+    print("today is a cold day")
+
+fruits = ["apple", "pear", "lemon", "peach", "passionfruit"]
+for fruit in fruits:
+    print(fruit)
+
+for single_num in range(5):
+    print(single_num)
+
+for single_num in range(0, 15):
+    print(single_num)
+
+for single_num in range(0, 11, 2):
+    print(single_num)
+
+# 1.
+fav_foods = ["pizza", "cake", "sweets"]
+for fav in fav_foods:
+    print(fav)
+
+# 2.
+for odd_nums in range(1, 30, 2):
+    print(odd_nums)
+
+timer = 1
+while timer < 4:
+    print("you still have time")
+    timer += 1
+    print(timer)
+print("time's up!")
+
+greeting = "hello, there everyone"
+counter = 1
+while counter < 5:
+    print(greeting)
+    counter += 1
+    print(counter)
