@@ -749,7 +749,6 @@ timer = 1
 while timer < 4:
     print("you still have time")
     timer += 1
-    print(timer)
 print("time's up!")
 
 greeting = "hello, there everyone"
@@ -757,4 +756,182 @@ counter = 1
 while counter < 5:
     print(greeting)
     counter += 1
-    print(counter)
+
+# must be written like this to avoid infinite looping
+x = 0
+while x < 6:
+    x += 1
+    if x == 4:
+        continue
+    print(x)
+
+x = 0
+while x < 6:
+    x += 1
+    if x != 4:
+        continue
+    print(x)
+
+figure_num = 5
+while figure_num < 10:
+    print(figure_num)
+    figure_num += 1
+
+number_again = 10
+while number_again > 0:
+    print(number_again)
+    number_again -= 1
+
+breaking = 0
+while breaking < 10:
+    breaking += 1
+    if breaking == 2:
+        continue
+    if breaking == 7:
+        break
+    print(breaking)
+
+a = 1
+while a < 14:
+    a += 1
+    print(a)
+    if a == 4:
+        break
+
+# 1.
+encouragement = 0
+while encouragement < 3:
+    print("Great Job")
+    encouragement += 1
+
+# 2.
+counting = 1
+while counting < 11:
+    print(counting)
+    counting += 1
+    if counting == 7:
+        break
+print("it's over")
+
+a = 1
+while a < 4:
+    print(a)
+    a += 1
+
+outer = ["outer 1", "outer 2", "outer 3"]
+inner = ["inner 1", "inner 2", "inner 3"]
+
+for out in outer:
+    print("--------------")
+    for inn in inner:
+        print(out, inn)
+
+numbers = [1, 2, 3]
+letters = ["a", "b", "c"]
+
+for num in numbers:
+    print("--------------")
+    print(num)
+    for letter in letters:
+        print(letter)
+
+outer = ["outer 1", "outer 2", "outer 3"]
+inner = ["inner 1", "inner 2", "inner 3", "inner 4", "inner 5"]
+
+for out in outer:
+    print(out)
+    print("--------------")
+    for inn in inner:
+        print(inn)
+    print("\n")
+
+# 1.
+outer = ["outer 1", "outer 2", "outer 3"]
+inner = ["inner 1", "inner 2", "inner 3", "inner 4", "inner 5"]
+
+for out in outer:
+    print("--------------")
+    print(out)
+    print("--------------")
+    for inn in inner:
+        print(inn)
+
+a = open("first_python/demo.txt", "r")
+print(a.read())
+a.close()
+
+a = open("first_python/demo.txt", "r")
+print(a.readline())
+a.close()
+
+a = open("first_python/demo.txt", "r")
+print(a.read(7))
+a.close()
+
+a = open("first_python/demo.txt", "r")
+print(a.read(3))
+a.close()
+
+with open("first_python/demo.txt") as myFile:
+    contents = myFile.read()
+    print(contents)
+
+##################################################################################################################
+# opens file and appends .write() text in the demo.txt file
+a = open("first_python/demo.txt", "a")
+a.write("\nHere is another line in our text file")
+a.close()
+
+# this opens the file with the newly appended text take from the .write() method in the code above
+with open("first_python/demo.txt") as myFile:
+    contents = myFile.read()
+    print(contents)
+##################################################################################################################
+
+##################################################################################################################
+with open("first_python/demo.txt") as myFile:
+    contents = myFile.read()
+    print(contents)
+
+a = open("first_python/demo.txt", "w")
+a.write("this will overwrite the text in the demo.txt file!")
+a.close()
+
+with open("first_python/demo.txt") as myFile:
+    contents = myFile.read()
+    print(contents)
+##################################################################################################################
+
+y = open("first_python/demo2.txt", "x")
+
+# 1.
+new_file = open("first_python/new_file.txt", "x")
+new_file.close() # needed!
+
+new_file = open("first_python/new_file.txt", "a") # "a" not "w"
+new_file.write("this text was written for the practice task")
+new_file.close()
+
+new_file = open("first_python/new_file.txt", "r")
+print(new_file.read())
+new_file.close()
+
+with open("first_python/new_file.txt") as myFile:
+    contents = myFile.read()
+    print(contents)
+
+# 2.
+new_file2 = open("first_python/new_file2.txt", "x")
+new_file2.close() # needed!
+
+start = 1
+new_file2 = open("first_python/new_file2.txt", "a") # "a" not "w"
+while start < 4:
+    new_file2.write(
+        "this will overwrite the text in the new_file2.txt file! \n")
+    start += 1
+new_file2.close()
+
+new_file2 = open("first_python/new_file2.txt", "r")
+print(new_file2.read())
+new_file2.close()

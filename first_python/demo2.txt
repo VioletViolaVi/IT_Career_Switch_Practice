@@ -1,0 +1,2 @@
+this file was created using: 
+            y = open("first_python/demo2.txt", "x") 
