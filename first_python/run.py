@@ -856,82 +856,172 @@ for out in outer:
     for inn in inner:
         print(inn)
 
-a = open("first_python/demo.txt", "r")
+a = open("first_python/text_files/demo.txt", "r")
 print(a.read())
 a.close()
 
-a = open("first_python/demo.txt", "r")
+a = open("first_python/text_files/demo.txt", "r")
 print(a.readline())
 a.close()
 
-a = open("first_python/demo.txt", "r")
+a = open("first_python/text_files/demo.txt", "r")
 print(a.read(7))
 a.close()
 
-a = open("first_python/demo.txt", "r")
+a = open("first_python/text_files/demo.txt", "r")
 print(a.read(3))
 a.close()
 
-with open("first_python/demo.txt") as myFile:
+with open("first_python/text_files/demo.txt") as myFile:
     contents = myFile.read()
     print(contents)
 
 ##################################################################################################################
 # opens file and appends .write() text in the demo.txt file
-a = open("first_python/demo.txt", "a")
+a = open("first_python/text_files/demo.txt", "a")
 a.write("\nHere is another line in our text file")
 a.close()
 
 # this opens the file with the newly appended text take from the .write() method in the code above
-with open("first_python/demo.txt") as myFile:
+with open("first_python/text_files/demo.txt") as myFile:
     contents = myFile.read()
     print(contents)
 ##################################################################################################################
 
 ##################################################################################################################
-with open("first_python/demo.txt") as myFile:
+with open("first_python/text_files/demo.txt") as myFile:
     contents = myFile.read()
     print(contents)
 
-a = open("first_python/demo.txt", "w")
+a = open("first_python/text_files/demo.txt", "w")
 a.write("this will overwrite the text in the demo.txt file!")
 a.close()
 
-with open("first_python/demo.txt") as myFile:
+with open("first_python/text_files/demo.txt") as myFile:
     contents = myFile.read()
     print(contents)
 ##################################################################################################################
 
-y = open("first_python/demo2.txt", "x")
+y = open("", "x")
 
 # 1.
-new_file = open("first_python/new_file.txt", "x")
+new_file = open("first_python/text_files/new_file.txt", "x")
 new_file.close() # needed!
 
-new_file = open("first_python/new_file.txt", "a") # "a" not "w"
+new_file = open("first_python/text_files/new_file.txt", "a") # "a" not "w"
 new_file.write("this text was written for the practice task")
 new_file.close()
 
-new_file = open("first_python/new_file.txt", "r")
+new_file = open("first_python/text_files/new_file.txt", "r")
 print(new_file.read())
 new_file.close()
 
-with open("first_python/new_file.txt") as myFile:
+with open("first_python/text_files/new_file.txt") as myFile:
     contents = myFile.read()
     print(contents)
 
 # 2.
-new_file2 = open("first_python/new_file2.txt", "x")
+new_file2 = open("first_python/text_files/new_file2.txt", "x")
 new_file2.close() # needed!
 
 start = 1
-new_file2 = open("first_python/new_file2.txt", "a") # "a" not "w"
+new_file2 = open("first_python/text_files/new_file2.txt", "a") # "a" not "w"
 while start < 4:
     new_file2.write(
         "this will overwrite the text in the new_file2.txt file! \n")
     start += 1
 new_file2.close()
 
-new_file2 = open("first_python/new_file2.txt", "r")
+new_file2 = open("first_python/text_files/new_file2.txt", "r")
 print(new_file2.read())
 new_file2.close()
+
+import shutil
+src = "first_python/text_files/demo3.txt"  # must be an existing file in directory to create new file below
+dat = "first_python/text_files/demo4.txt" # creates new file
+shutil.copy(src, dat) # copy's file
+
+import os
+# renames file
+os.rename("first_python/text_files/demo4.txt", "first_python/text_files/LetItBe.txt")
+
+import os
+# deletes files
+os.remove("first_python/text_files/LetItBe.txt")
+
+
+# 1.
+import shutil
+src = "first_python/text_files/demo3.txt"
+dat = "first_python/text_files/carefulWhatYouWishFor.txt"
+shutil.copy(src, dat)
+
+import os
+os.rename("first_python/text_files/carefulWhatYouWishFor.txt", "first_python/text_files/writtenInTheStars.txt")
+
+
+# 2.
+new_file = open("first_python/text_files/writtenInTheStars.txt", "x")
+new_file.close()
+
+start2 = 1
+new_file2 = open("first_python/text_files/writtenInTheStars.txt", "a")
+while start2 < 4:
+    new_file2.write(
+        "here are a few lines of text for the written in the stars text file \n")
+    start2 += 1
+new_file2.close()
+
+import shutil
+src = "first_python/text_files/writtenInTheStars.txt"
+dat = "first_python/text_files/carefulWhatYouWishFor.txt"
+shutil.copy(src, dat)
+
+new_file = open("first_python/text_files/carefulWhatYouWishFor.txt", "a")
+new_file.write("appended new text to this copied file yay \n")
+new_file.close()
+
+new_file = open("first_python/text_files/writtenInTheStars.txt", "r")
+print(new_file.read())
+new_file.close()
+
+new_file = open("first_python/text_files/carefulWhatYouWishFor.txt", "r")
+print(new_file.read())
+new_file.close()
+
+
+with open("first_python/text_files/hello.txt", "w") as file:
+    file.write("hey there!")
+
+x = open("first_python/text_files/text_files/hello.txt", "r")
+print(x.read())
+x.close()
+
+
+with open("first_python/text_files/names.txt", "r") as name_file:
+    with open("first_python/text_files/messages.txt", "r") as message_file:
+        body = message_file.read()
+        for name in name_file:
+            mail = "Hello " + name + body
+            with open("first_python/text_files/" + name.strip() + ".txt", "w") as message_file:
+                message_file.write(mail)
+
+with open("first_python/text_files/justine.txt", "r") as justine:
+    print(justine.read())
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
