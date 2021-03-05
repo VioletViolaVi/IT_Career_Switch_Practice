@@ -1,3 +1,3 @@
-# JavaScript Practice & IT Career Switch
+IT Career Switch Practice
 
 Practice code with IT Career Switch.
