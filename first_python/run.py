@@ -1000,28 +1000,281 @@ x.close()
 
 with open("first_python/text_files/names.txt", "r") as name_file:
     with open("first_python/text_files/messages.txt", "r") as message_file:
-        body = message_file.read()
+        body= message_file.read()
         for name in name_file:
             mail = "Hello " + name + body
             with open("first_python/text_files/" + name.strip() + ".txt", "w") as message_file:
-                message_file.write(mail)
+                message_file.write(mail) 
 
 with open("first_python/text_files/justine.txt", "r") as justine:
     print(justine.read())
 
 
+txt = input("can you see this? yes or no")
+print("you said:", txt)
+
+txt = input("give me a number:")
+num = int(txt)
+print("the number you gave was:", num)
+
+txt = int(input("give me a number:"))
+print("the number you gave was:", txt)
+
+txt = input("give me number please:")
+try:
+    num = int(txt)
+    print("the number you gave was:", num)
+except ValueError:
+    print("please put in a real number, not a string or text")
+    txt = input("PLEASE TRY AGAIN! give me another number please:")
+num = int(txt)
+print("the number you gave was:", num)
+
+salary = 80000
+txt = "you make £{} dollars a year"
+print(txt.format(salary))
+
+# {field_name:conversion} "{0, s}"
+
+string = "Dave teaches {} {}."
+print(string.format("cyber", "security"))
+
+string2 = "The primary colours are: {}, {} and {}."
+print(string2.format("red", "yellow", "blue"))
+
+eating = "People like to eat {}, {} and {} on the {}th of December."
+print(eating.format("turkey", "mashed potatoes", "chocolate pudding", 25))
+
+dancing = "Dancing the {} requires {} people with {} outfits in a dancing {} with an {}."
+print(dancing.format("hall", "audience", "sparkling", 2, "Cha Cha", "hall"))
+
+dancing = "Dancing the {4} requires {3} people with {2} outfits in a dancing {5} with an {1}."
+print(dancing.format("hall", "audience", "sparkling", 2, "Cha Cha", "hall"))
+
+dancing = "Dancing the {4} requires {3} people with {adj_1} outfits in a dancing {4} with an {1}."
+print(dancing.format("hall", "audience", 2, "Cha Cha", "hall", adj_1="sparkling"))
+
+string = "Bob likes to play {act} and eat {1} {0}"
+print(string.format("dogs", "hot", act="games"))
+
+print("Bob likes to play {act} and eat {1} {0}".format("dogs", "hot", act="games"))
+
+import sys
+print("The name of our file is: ", (sys.argv[0]))
+
+import sys
+print("The name of our file is: ", (sys.argv[0]))
+print("Number of arguments: ", len(sys.argv))
+print("The arguments are: ", str(sys.argv))
+
+############################################# Defining Functions #############################################
+def first_function():
+    x = 1
+    while x < 4:
+        print("Hello World!")
+        x += 1
+first_function()
+
+def second_function(fname):
+    print("Hello " + fname)
+second_function("Justine")
+second_function("Tracy")
+second_function("Crash")
+
+def third_function(food):
+    print(f"I like to eat {food}.")
+third_function("eggs")
+third_function("fish")
+third_function("beans")
+
+def my_age(age):
+    print(f"I'm {age} years old.")
+my_age(2)
+my_age(7)
+my_age(56)
+
+def greet():
+    print("Hello there, how are you today?")
+greet()
+
+############################################# Using Default Argument #############################################
+
+def student(fname, lname="Lawson", subject="ICT"):
+    print(fname, lname, "studies", subject)
+student("Tony")
+student("Timmy", "Phillips", "Maths")
+student("Paul", "Smith")
+
+def greeting(name, msg="How are you today?"):
+    print("Hey", name + "" + msg)
+greeting(name="Andy. ", msg="Have you seen Paris?")
+greeting(msg="Have you seen Paris?", name="Andy. ")
+greeting("Sammie. ", msg="Have you seen Paris?")
+greeting("Tracy. ")
+
+############################################# Handling Exceptions #############################################
+
+try:
+    print(0/0) # ZeroDivisionError
+except ZeroDivisionError:
+    print("You cannot divide by zero :(")
+
+number = int(input("put in a number between 1-10:"))
+print("You put the number: ", number)  
+
+import sys
+try:
+    num = int(input("put in a number between 1-10:"))
+except ValueError:
+    print("You didn't put in a number :(")
+    print("Please use a number")
+    sys.exit()
+print("You put the number: ", num)  
+
+import sys
+try:
+    num = int(input("put in a number between 1-10 below:\n"))
+    if num <= 0:
+        print("This number is too low!")
+        sys.exit()
+    if num >= 11:
+        print("This number is too high!")
+        sys.exit()
+except ValueError:
+    print("You didn't put in a number :(")
+    print("Please use a number")
+    sys.exit()
+print("You put the number: ", num) 
+
+############################################# Using Math and Random Modules #############################################
+
+import random
+
+print("prints a random number")
+print(random.random())
+print("\n")
+
+print("prints a random float between the 2 given parameters")
+print(random.uniform(89, 90))
+print("\n")
+
+print("prints a random number within range of the 2 given parameters")
+print(random.uniform(2, 5))
+print("\n")
+
+randomise_list = ["apple", "banana", "citrus", "dragonfruit"]
+random.shuffle(randomise_list)
+print(randomise_list)
+print("\n")
+
+print("prints a random int number e.g: (0, 10) between 0 and 10 inclusively")
+print(random.randint(1, 5))
+print("\n")
+
+print("prints a random int number e.g: (0, 10) between 0 and 9, 10 not included")
+print(random.randrange(1, 5))
+print("\n")
+
+print("prints random ODD number")
+print(random.randrange(1, 11, 2))
+print("\n")
+
+print("prints random EVEN number")
+print(random.randrange(2, 11, 2))
+print("\n")
+
+print("random EVEN and ODD number")
+print(random.randrange(1, 11, 2))
+print(random.randrange(2, 11, 2))
+print("\n")
 
 
+import math
+
+floor_num = float(input(print("Enter a number and I'll round it down to the ground for you :) ")))
+print(str(floor_num) + " has been rounded down to " + str(math.floor(floor_num)) + ".")
+
+square_num = int(input(print("Enter a number and I'll tell you the square root of the number :)")))
+print(str(math.sqrt(square_num)) + " " + "is the square root of " + str(square_num) + ".")
+
+print("rounds number upwards: ceil")
+print(math.ceil(4.1))
+print(math.ceil(5.7))
+print(math.ceil(6.3))
+print("\n")
+
+print("rounds number downwards: floor")
+print(math.floor(7.3))
+print(math.floor(1.5))
+print(math.floor(9.2))
+print("\n")
+
+print("prints square root of number")
+print(math.sqrt(100))
+print(math.sqrt(81))
+print(int(math.sqrt(49)))
+print("\n")
+
+print("prints number to the power of")
+print(math.pow(10,5))
+print(math.pow(2,7))
+print(math.pow(0,4))
+print("\n")
+
+print("prints remainder of x/y")
+print(math.fmod(94,5))
+print(math.fmod(15,7))
+print(math.fmod(27,4))
+print("\n")
+
+from datetime import date
+from datetime import time
+from datetime import datetime
+
+today = date.today()
+date_time = datetime.now()
+print("Today's date is: ", today)
+print("All together now: ", date_time)
 
 
+import os
 
+directory_path = os.getcwd()
+print("Your current directory is: " + directory_path)
+foldername = os.path.basename(directory_path)
+print("The directory name is: " + foldername)
 
+import os
+print("\n")
+print(os.stat("app.py"))
+print("\n")
 
+print(float(16))
 
+#Module 25 - Displaying Datetime and Working Directory
 
+#import all your modules!
 
+from datetime import date
+from datetime import time
+from datetime import datetime
 
+today = date.today()
+date_time = datetime.now()
 
+print("Today's date is: ", today)
+print("Can you be more specific please? ", date_time)
+print("Break it down....")
+print("The hour ", date_time.hour)
+print("The minute ", date_time.minute)
+print("The seconds ", date_time.second)
 
+#Working directory
+print("\n")
+import os
 
+dirpath = os.getcwd()
+print("Your current working directory is: " + dirpath)
 
+foldername = os.path.basename(dirpath)
+print("The specific folder is: " + foldername)
